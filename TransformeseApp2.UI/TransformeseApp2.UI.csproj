@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TransformeseApp2.BLL\TransformeseApp2.BLL.csproj" />
+  </ItemGroup>
+
 </Project>

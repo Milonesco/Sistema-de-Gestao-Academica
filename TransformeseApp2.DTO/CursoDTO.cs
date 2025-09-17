@@ -26,4 +26,3 @@ namespace TransformeseApp2.DTO
 
         
     }
-}
