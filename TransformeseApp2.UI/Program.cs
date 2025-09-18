@@ -25,8 +25,8 @@ while (true)
     {
         case "1":
             Console.WriteLine("Nome do aluno: ");
-            string nomeAluno = Console.ReadLine();  
-            
+            string nomeAluno = Console.ReadLine();
+
             Console.WriteLine("ID do curso:");
             int cursoId = int.Parse(Console.ReadLine());
             
@@ -41,6 +41,55 @@ while (true)
             });
 
             Console.WriteLine($"Aluno {nomeAluno} cadastrado com sucesso!");
+            pause();
+            break;
+
+        case "2":
+            Console.Clear();
+            Console.WriteLine(" === Lista de alunos === ");
+
+            var alunos = alunoBLL.ListarAlunos();
+            foreach (var aluno in alunos)
+            {
+                var curso = cursoBLL.GetById(aluno.CursoId);
+                var unidade = unidadeBLL.GetById(aluno.UnidadeId);
+
+                Console.WriteLine(
+                    $"""
+                    ID: {aluno.Id}
+                    Nome: {aluno.Nome}
+                    Curso: {curso?.Nome ?? "Não encontrado"}
+                    Unidade: {unidade?.Nome ?? "Não encontrada"}
+                    """
+                    );
+            }
+            pause();
+            break;
+
+        case "3":
+            Console.WriteLine("Nome do curso: ");
+            string nomeCurso = Console.ReadLine();
+
+            Console.WriteLine($"O curso {nomeCurso} foi adicionado com sucesso!");
+
+            pause(); 
+            break;
+
+        case "4";
+            Console.Clear();
+            Console.WriteLine("=== Lista de cursos ===");
+
+            var cursos = cursoBLL.ListarCursos();
+            foreach (var curso in cursos)
+            {
+                Console.WriteLine(
+                    $"""
+                    ID: {curso.Id}
+                    Nome: {curso.Nome}
+                    Carga Horaria: {curso.CargaHoraria}
+                    """
+                    );
+            }
             pause();
             break;
     }
