@@ -11,6 +11,8 @@ namespace TransformeseApp2.BLL
             //Validação antes de salvar o curso
             if (string.IsNullOrWhiteSpace(cursoDTO.Nome))
                 throw new Exception("Nome do curso é obrigatório.");
+            if (int.IsNegative(cursoDTO.CargaHoraria))
+                throw new Exception("Carga horaria precisa ser positiva, tente novamente, por favor!");
             Database.Cursos.Add(cursoDTO);
         }
         public List<CursoDTO> ListarCursos() => Database.Cursos;
