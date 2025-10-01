@@ -15,10 +15,31 @@ namespace TransformeseApp2.BLL
         }
         public List<AlunoDTO> ListarAlunos() => Database.Alunos;
 
-        public AlunoDTO GetById(int id)
+        public void AtualizarAluno(AlunoDTO alunoDTO)
         {
-            return _alunos.FirstOrDefault(a => a.Id == id);
+            var alunoExistente = Database.Alunos.FirstOrDefault(aluno => aluno.Id == alunoDTO.Id);
+            if (alunoExistente == null)
+                throw new Exception("Aluno não encontrado.");
+
+            if (string.IsNullOrWhiteSpace(alunoDTO.Nome))
+                throw new Exception("Nome é obrigatório.");
+            
+
+            // Atualiza os campos do aluno
+            alunoExistente.Nome = alunoDTO.Nome;
+            alunoExistente.CursoId = alunoDTO.CursoId;
+            alunoExistente.UnidadeId = alunoDTO.UnidadeId;
         }
 
+        public void RemoverAluno(int id)
+        {
+            var aluno = Database.Alunos.FirstOrDefault(aluno => aluno.Id == id);
+            if (aluno == null)
+            {
+                throw new Exception("Aluno não encontrado.");
+            }
+
+            Database.Alunos.Remove(aluno);
+        }
     }
 }

@@ -67,15 +67,30 @@ while (true)
             break;
 
         case "3":
-            Console.WriteLine("Nome do curso: ");
-            string nomeCurso = Console.ReadLine();
+            try
+            {
+                Console.WriteLine("Nome do curso: ");
+                string nomeCurso = Console.ReadLine();
 
-            Console.WriteLine($"O curso {nomeCurso} foi adicionado com sucesso!");
+                Console.WriteLine("Carga horária (em horas): ");
+                int cargaHoraria = int.Parse(Console.ReadLine());
 
+                cursoBLL.CadastrarCurso(new CursoDTO
+                {
+                    Nome = nomeCurso,
+                    CargaHoraria = cargaHoraria
+                });
+
+                Console.WriteLine($"O curso {nomeCurso} foi adicionado, com a carga hodaria de: {cargaHoraria}h");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao cadastrar curso: {ex.Message}");
+            }
             pause(); 
             break;
 
-        case "4";
+        case "4":
             Console.Clear();
             Console.WriteLine("=== Lista de cursos ===");
 
@@ -92,11 +107,47 @@ while (true)
             }
             pause();
             break;
+
+        case "5":
+            Console.WriteLine("Nome da unidade: ");
+            string nomeUnidade = Console.ReadLine();
+
+            unidadeBLL.CadastrarUnidade(new UnidadeDTO { Nome = nomeUnidade });
+
+            Console.WriteLine("Unidade cadastrada com sucesso!");
+            pause();
+            break;
+
+        case "6":
+            Console.Clear();
+            var unidades = unidadeBLL.ListarUnidades();
+
+            foreach(var unidade in unidades)
+            {
+                Console.WriteLine(
+                    $"""
+                    ID:{unidade.Id}
+                    Nome:{unidade.Nome}
+                    """
+                    );
+            }
+
+
+            pause();
+            break;
+
+        case "0":
+            return;
+
+        default:
+            Console.WriteLine("Opção Inválida, tente novamente!");
+            pause();
+            break;
     }
 }
 
 static void pause()
 {
-    Console.WriteLine("\n Pressione qualquer tecla para continuar...");
+    Console.WriteLine("\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
 }

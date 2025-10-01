@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica-1\\TransformeseApp2.DTO\\TransformeseApp2.DTO.csproj",
+      "projectUniqueName": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.DTO\\TransformeseApp2.DTO.csproj",
       "projectName": "TransformeseApp2.DTO",
-      "projectPath": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica-1\\TransformeseApp2.DTO\\TransformeseApp2.DTO.csproj",
+      "projectPath": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.DTO\\TransformeseApp2.DTO.csproj",
       "packagesPath": "C:\\Users\\gabriel.mvieira12\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica-1\\TransformeseApp2.DTO\\obj\\",
+      "outputPath": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.DTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

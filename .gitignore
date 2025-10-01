@@ -1,0 +1,18 @@
+# Pasta do Visual Studio
+.vs/
+
+# Pastas de compilação
+[Bb]in/
+[Oo]bj/
+
+# Arquivos de usuário específicos
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Outros
+*.dll
+*.exe
+*.pdb
+*.nupkg
