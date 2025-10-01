@@ -1,5 +1,6 @@
 ﻿using TransformeseApp2.BLL;
 using TransformeseApp2.DAL;
+using TransformeseApp2.DTO;
 
 namespace TransformeseApp2.Desktop
 {
@@ -66,7 +67,61 @@ namespace TransformeseApp2.Desktop
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            string nomeImg =$"{Database.Usuarios.Count + 1} - {txtUsuario.Text}.jpg";
+
+            // Nome da imagem a ser salva
+            string nomeImg = $"{Database.Usuarios.Count + 1} - {txtUsuario.Text}.jpg";
+
+            // Verifica se o diretorio para salvar as imagens existe, se não existir cria o diretorio
+            if (!Directory.Exists(diretorio))
+            {
+                Directory.CreateDirectory(diretorio);
+            }
+
+            //URL da imagem
+
+            string UrlImagem = Path.Combine(diretorio, nomeImg);
+
+            Image imagem = pbFoto.Image;
+            imagem.Save(UrlImagem);
+
+            var usuario = new UsuarioDTO
+            {
+                Id = Database.Usuarios.Count + 1,
+                Nome = txtNome.Text,
+                Login = txtUsuario.Text,
+                Senha = txtSenha.Text,
+                UrlFoto = txtFotoCaminho.Text
+            };
+
+            UsuarioBLL.CadastrarUsuario(usuario);
+            MessageBox.Show($"Usuário {usuario.Nome} cadastrado com sucesso!", "Cadastro de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtNome.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            pbFoto.Image = null;
+
+            this.Close();
+        }
+
+        private void txtNome_TabIndexChanged(object sender, EventArgs e)
+        {
+            txtNome.Text = string.Empty;
+        }
+
+        private void txtUsuario_TabIndexChanged(object sender, EventArgs e)
+        {
+            txtUsuario.Text = string.Empty;
+        }
+
+        private void txtSenha_TabIndexChanged(object sender, EventArgs e)
+        {
+            txtSenha.Text = string.Empty;
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -103,7 +103,8 @@
             txtNome.SelectedText = "";
             txtNome.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtNome.Size = new Size(200, 36);
-            txtNome.TabIndex = 2;
+            txtNome.TabIndex = 0;
+            txtNome.TabIndexChanged += txtNome_TabIndexChanged;
             txtNome.Click += txtNome_Click;
             // 
             // txtUsuario
@@ -124,8 +125,9 @@
             txtUsuario.SelectedText = "";
             txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtUsuario.Size = new Size(200, 36);
-            txtUsuario.TabIndex = 2;
+            txtUsuario.TabIndex = 1;
             txtUsuario.TextChanged += txtUsuario_TextChanged;
+            txtUsuario.TabIndexChanged += txtUsuario_TabIndexChanged;
             txtUsuario.Click += txtUsuario_Click;
             // 
             // txtSenha
@@ -147,6 +149,8 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSenha.Size = new Size(200, 36);
             txtSenha.TabIndex = 2;
+            txtSenha.TextChanged += txtSenha_TextChanged;
+            txtSenha.TabIndexChanged += txtSenha_TabIndexChanged;
             txtSenha.Click += txtSenha_Click;
             // 
             // btnCadastrar
@@ -213,7 +217,7 @@
             btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnFechar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnFechar.Size = new Size(30, 30);
-            btnFechar.TabIndex = 5;
+            btnFechar.TabIndex = 4;
             btnFechar.Text = "X";
             btnFechar.Click += btnFechar_Click;
             // 
