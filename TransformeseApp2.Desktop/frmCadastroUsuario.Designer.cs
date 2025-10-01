@@ -166,6 +166,7 @@
             btnCadastrar.Size = new Size(210, 45);
             btnCadastrar.TabIndex = 3;
             btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // guna2HtmlLabel5
             // 

@@ -1,4 +1,5 @@
 ﻿using TransformeseApp2.BLL;
+using TransformeseApp2.DAL;
 
 namespace TransformeseApp2.Desktop
 {
@@ -50,7 +51,7 @@ namespace TransformeseApp2.Desktop
             openFileDialog.Filter = "Arquivos de Imagem |*.jpg;*.jpeg;*.png;*.gif;";
             openFileDialog.Title = "Selecione uma imagem";
 
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string nomeArquivoImagem = openFileDialog.FileName;
 
@@ -61,6 +62,11 @@ namespace TransformeseApp2.Desktop
                 //Salva o caminho da foto
                 txtFotoCaminho.Text = nomeArquivoImagem;
             }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            string nomeImg =$"{Database.Usuarios.Count + 1} - {txtUsuario.Text}.jpg";
         }
     }
 }

@@ -15,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmcadastrousuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\transformeseapp2.desktop\\frmcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|c:\\users\\gabriel.mvieira12\\source\\repos\\sistema-de-gestao-academica\\transformeseapp2.desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00645E7E-B752-439D-BA0F-23A41BD4AC78}|TransformeseApp2.BLL\\TransformeseApp2.BLL.csproj|c:\\users\\gabriel.mvieira12\\source\\repos\\sistema-de-gestao-academica\\transformeseapp2.bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00645E7E-B752-439D-BA0F-23A41BD4AC78}|TransformeseApp2.BLL\\TransformeseApp2.BLL.csproj|solutionrelative:transformeseapp2.bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\transformeseapp2.desktop\\frmcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\transformeseapp2.desktop\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -41,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|c:\\users\\gabriel.mvieira12\\source\\repos\\sistema-de-gestao-academica\\transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|solutionrelative:transformeseapp2.desktop\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00645E7E-B752-439D-BA0F-23A41BD4AC78}|TransformeseApp2.BLL\\TransformeseApp2.BLL.csproj|c:\\users\\gabriel.mvieira12\\source\\repos\\sistema-de-gestao-academica\\transformeseapp2.bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00645E7E-B752-439D-BA0F-23A41BD4AC78}|TransformeseApp2.BLL\\TransformeseApp2.BLL.csproj|solutionrelative:transformeseapp2.bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A563301-3471-4262-8A05-24D8C11A8AAC}|TransformeseApp2.Desktop\\TransformeseApp2.Desktop.csproj|c:\\users\\gabriel.mvieira12\\source\\repos\\sistema-de-gestao-academica\\transformeseapp2.desktop\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "frmCursos.cs",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmCursos.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmCursos.cs",
@@ -146,14 +146,14 @@
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmCadastroUsuario.cs",
               "ToolTip": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmCadastroUsuario.cs",
               "RelativeToolTip": "TransformeseApp2.Desktop\\frmCadastroUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAnwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-30T00:51:08.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "frmAlunos.cs",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmAlunos.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmAlunos.cs",
@@ -203,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmLogin.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmLogin.cs",
@@ -265,15 +265,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "UsuarioBLL.cs",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.BLL\\UsuarioBLL.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.BLL\\UsuarioBLL.cs",
               "ToolTip": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.BLL\\UsuarioBLL.cs",
               "RelativeToolTip": "TransformeseApp2.BLL\\UsuarioBLL.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T22:35:45.608Z"
+              "WhenOpened": "2025-09-26T22:35:45.608Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -301,18 +302,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "frmAlunos.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmAlunos.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmAlunos.cs",
               "ToolTip": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmAlunos.cs [Projeto]",
               "RelativeToolTip": "TransformeseApp2.Desktop\\frmAlunos.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T00:43:05.506Z"
+              "WhenOpened": "2025-09-30T00:43:05.506Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "frmEsqueciSenha.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmEsqueciSenha.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmEsqueciSenha.cs",
@@ -324,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "frmLogin.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmLogin.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmLogin.cs",
@@ -347,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmCursos.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\gabriel.mvieira12\\source\\repos\\Sistema-de-Gestao-Academica\\TransformeseApp2.Desktop\\frmCursos.cs",
               "RelativeDocumentMoniker": "TransformeseApp2.Desktop\\frmCursos.cs",
