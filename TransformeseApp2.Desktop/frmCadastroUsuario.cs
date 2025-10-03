@@ -100,8 +100,6 @@ namespace TransformeseApp2.Desktop
             txtUsuario.Text = string.Empty;
             txtSenha.Text = string.Empty;
             pbFoto.Image = null;
-
-            this.Close();
         }
 
         private void txtNome_TabIndexChanged(object sender, EventArgs e)
@@ -120,6 +118,11 @@ namespace TransformeseApp2.Desktop
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
         {
 
         }

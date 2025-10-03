@@ -25,7 +25,7 @@ namespace TransformeseApp2.Desktop
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmAlunos telaAlunos = new frmAlunos();
+            frmAlunos2 telaAlunos = new frmAlunos2();
             telaAlunos.ShowDialog();
         }
 

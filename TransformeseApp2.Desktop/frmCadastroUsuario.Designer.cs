@@ -77,6 +77,7 @@
             // pbFoto
             // 
             pbFoto.BorderStyle = BorderStyle.FixedSingle;
+            pbFoto.Image = Properties.Resources.user;
             pbFoto.Location = new Point(42, 107);
             pbFoto.Name = "pbFoto";
             pbFoto.Size = new Size(250, 250);
@@ -104,6 +105,7 @@
             txtNome.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtNome.Size = new Size(200, 36);
             txtNome.TabIndex = 0;
+            txtNome.TextChanged += txtNome_TextChanged;
             txtNome.TabIndexChanged += txtNome_TabIndexChanged;
             txtNome.Click += txtNome_Click;
             // 
