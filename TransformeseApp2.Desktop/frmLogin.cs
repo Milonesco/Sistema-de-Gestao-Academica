@@ -23,8 +23,8 @@ namespace TransformeseApp2.Desktop
                 var usuario = usuarioBLL.Login(txtUsuario.Text, txtSenha.Text);
 
                 MessageBox.Show($"Seja bem vinda(a) {txtUsuario.Text}!");
-                frmPrincipal frmPrincipal = new frmPrincipal();
-                frmPrincipal.Show();
+                frmMain frmMain= new frmMain();
+                frmMain.Show();
                 Hide();
             }
             catch (Exception ex)
