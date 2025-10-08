@@ -17,7 +17,7 @@
       "TransformeseApp2.DTO/1.0.0": {
         "runtime": {
           "TransformeseApp2.DTO.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
