@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransformeseApp2.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e52bea9af3dd40ef0d38d3df7ec52828e28db4e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5067058584bdae3d719629c68551853d1b9a3a61")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransformeseApp2.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransformeseApp2.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

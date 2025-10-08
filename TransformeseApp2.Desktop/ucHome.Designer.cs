@@ -61,7 +61,7 @@
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             pbAlunos = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ucHomePanel.SuspendLayout();
             guna2CircleProgressBar3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox5).BeginInit();
@@ -85,7 +85,7 @@
             ucHomePanel.Controls.Add(guna2PictureBox3);
             ucHomePanel.Controls.Add(guna2PictureBox2);
             ucHomePanel.Controls.Add(pbAlunos);
-            ucHomePanel.Controls.Add(guna2HtmlLabel1);
+            ucHomePanel.Controls.Add(lblUser);
             ucHomePanel.CustomizableEdges = customizableEdges16;
             ucHomePanel.Location = new Point(0, 0);
             ucHomePanel.Name = "ucHomePanel";
@@ -290,15 +290,15 @@
             pbAlunos.TabIndex = 1;
             pbAlunos.TabStop = false;
             // 
-            // guna2HtmlLabel1
+            // lblUser
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Century Gothic", 18F);
-            guna2HtmlLabel1.Location = new Point(7, 8);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(266, 32);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Bem vindo(a) Usuário!";
+            lblUser.BackColor = Color.Transparent;
+            lblUser.Font = new Font("Century Gothic", 18F);
+            lblUser.Location = new Point(7, 8);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(266, 32);
+            lblUser.TabIndex = 0;
+            lblUser.Text = "Bem vindo(a) Usuário!";
             // 
             // ucHome
             // 
@@ -307,6 +307,7 @@
             Controls.Add(ucHomePanel);
             Name = "ucHome";
             Size = new Size(805, 401);
+            Load += ucHome_Load;
             ucHomePanel.ResumeLayout(false);
             ucHomePanel.PerformLayout();
             guna2CircleProgressBar3.ResumeLayout(false);
@@ -330,7 +331,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox pbAlunos;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUser;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;

@@ -317,6 +317,7 @@
             dgAlunos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgAlunos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgAlunos.CellClick += dgAlunos_CellClick;
+            dgAlunos.CellContentClick += dgAlunos_CellContentClick;
             // 
             // guna2Panel2_top
             // 
@@ -419,6 +420,7 @@
             txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPesquisa.Size = new Size(234, 36);
             txtPesquisa.TabIndex = 3;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // guna2DragControl1
             // 

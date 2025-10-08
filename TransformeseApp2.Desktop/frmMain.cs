@@ -1,4 +1,7 @@
-﻿namespace TransformeseApp2.Desktop
+﻿using System.Security.Policy;
+using TransformeseApp2.BLL;
+
+namespace TransformeseApp2.Desktop
 {
     public partial class frmMain : Form
     {
@@ -9,6 +12,7 @@
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            AtualizarUsuarioLogado();
             AbrirUserControl(new ucHome());
         }
 
@@ -32,6 +36,7 @@
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
             AbrirUserControl(new ucHome());
         }
 
@@ -45,6 +50,63 @@
             Close();
             frmLogin telaLogin = new();
             telaLogin.ShowDialog();
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AtualizarUsuarioLogado()
+        {
+
+            // Centralizar horizontalmente o lblUsername em relação ao pbFoto
+            lblUsername.Left = pbFoto.Left + (pbFoto.Width - lblUsername.Width) / 2;
+
+            lblUsername.Top = pbFoto.Bottom + 4;
+
+            lblUsername.Text = Session.UsuarioLogado.Nome ?? "Usuário";
+
+            if (!string.IsNullOrEmpty(Session.UsuarioLogado.UrlFoto) && File.Exists(Session.UsuarioLogado.UrlFoto))
+            {
+                pbFoto.Image = Image.FromFile(Session.UsuarioLogado.UrlFoto);
+            }
+
+        }
+
+        private void pbNotification_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (int.TryParse(npNotifica.Text, out int qtdNotifica))
+                {
+                    if (qtdNotifica > 0)
+                    {
+                        qtdNotifica--;
+                        npNotifica.Text = qtdNotifica > 0 ? qtdNotifica.ToString() : string.Empty;
+                        npNotifica.FillColor = qtdNotifica > 0 ? npNotifica.FillColor : Color.Transparent;
+
+                        string mensagem = qtdNotifica > 0 ? $"Você tem {qtdNotifica} notificações." : "Você não tem mais notificações.";
+                        mdNotifica.Show(mensagem);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            AbrirUserControl(new ucUsuario());
         }
     }
 }

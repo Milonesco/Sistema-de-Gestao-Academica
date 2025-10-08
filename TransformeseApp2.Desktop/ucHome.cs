@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using TransformeseApp2.BLL;
 using TransformeseApp2.DAL;
 
 namespace TransformeseApp2.Desktop
@@ -18,13 +10,17 @@ namespace TransformeseApp2.Desktop
             InitializeComponent();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        private void ucHome_Load(object sender, EventArgs e)
         {
+            lblUser.Text = $"Olá, " + (Session.UsuarioLogado.Nome ?? "Usuário");
             ContarAlunos();
             ContarCursos();
             ContarUnidades();
         }
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
         private void ContarAlunos()
         {
             lblAlunos.Text = Database.Alunos.Count.ToString();

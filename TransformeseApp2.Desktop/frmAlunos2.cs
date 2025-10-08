@@ -179,5 +179,15 @@ namespace TransformeseApp2.Desktop
                 btnAtualizar.Enabled = true;
             }
         }
+
+        private void dgAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,25 @@ namespace TransformeseApp2.BLL
             return usuario;
         }
 
+        public List<UsuarioDTO> ListarUsuarios() => Database.Usuarios;
+
+        public void AtualizarUsuario(UsuarioDTO usuarioDTO)
+        {
+            var usuarioExistente = Database.Usuarios.FirstOrDefault(usuario => usuario.Id == usuarioDTO.Id);
+            if (usuarioExistente == null)
+                throw new Exception("Usuario não encontrado.");
+
+            if (string.IsNullOrWhiteSpace(usuarioDTO.Nome))
+                throw new Exception("Nome é obrigatório.");
+
+
+            // Atualiza os campos do usuario
+            usuarioExistente.Id = usuarioDTO.Id;
+            usuarioExistente.Nome = usuarioDTO.Nome;
+            usuarioExistente.Login = usuarioDTO.Login;
+            usuarioExistente.Senha = usuarioDTO.Senha;
+        }
+
         public void CadastrarUsuario(UsuarioDTO usuario)
         {
             if (string.IsNullOrWhiteSpace(usuario.Nome))
@@ -45,6 +64,17 @@ namespace TransformeseApp2.BLL
                 throw new Exception("Usuário não encontrado!");
 
             usuario.Senha = novaSenha;
+        }
+
+        public void RemoverUsuario(int id)
+        {
+            var usuario = Database.Usuarios.FirstOrDefault(usuario => usuario.Id == id);
+            if (usuario == null)
+            {
+                throw new Exception("Usuário não encontrado.");
+            }
+
+            Database.Usuarios.Remove(usuario);
         }
     }
 
