@@ -84,6 +84,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlLight;
+            pictureBox2.Enabled = false;
             pictureBox2.Image = Properties.Resources.user;
             pictureBox2.Location = new Point(498, 279);
             pictureBox2.Name = "pictureBox2";
@@ -157,6 +158,7 @@
             // txtUsuario
             // 
             txtUsuario.BorderColor = SystemColors.ControlLight;
+            txtUsuario.Cursor = Cursors.IBeam;
             txtUsuario.CustomizableEdges = customizableEdges3;
             txtUsuario.DefaultText = "";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -179,6 +181,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.ControlLight;
+            pictureBox5.Enabled = false;
             pictureBox5.Image = Properties.Resources.password;
             pictureBox5.Location = new Point(498, 355);
             pictureBox5.Name = "pictureBox5";
@@ -221,6 +224,7 @@
             // txtSenha
             // 
             txtSenha.BorderColor = SystemColors.ControlLight;
+            txtSenha.Cursor = Cursors.IBeam;
             txtSenha.CustomizableEdges = customizableEdges7;
             txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -244,11 +248,11 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.FromArgb(140, 10, 126);
-            guna2HtmlLabel3.Font = new Font("Century Gothic", 26F, FontStyle.Bold);
+            guna2HtmlLabel3.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.White;
             guna2HtmlLabel3.Location = new Point(107, 346);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(112, 43);
+            guna2HtmlLabel3.Size = new Size(115, 41);
             guna2HtmlLabel3.TabIndex = 3;
             guna2HtmlLabel3.Text = "LOGIN";
             // 
@@ -256,11 +260,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(140, 10, 126);
-            label1.Font = new Font("Century Gothic", 16F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(75, 403);
             label1.Name = "label1";
-            label1.Size = new Size(195, 52);
+            label1.Size = new Size(199, 52);
             label1.TabIndex = 4;
             label1.Text = "Tecnologias que \r\nTransforma Vidas\r\n";
             label1.Click += label1_Click;
@@ -268,17 +272,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 16F);
+            label2.Font = new Font("Microsoft Sans Serif", 16F);
             label2.ForeColor = Color.FromArgb(140, 10, 126);
             label2.Location = new Point(548, 224);
             label2.Name = "label2";
-            label2.Size = new Size(220, 25);
+            label2.Size = new Size(200, 26);
             label2.TabIndex = 5;
             label2.Text = "Faça seu login aqui";
             // 
             // btnCadastrar
             // 
             btnCadastrar.BorderRadius = 20;
+            btnCadastrar.Cursor = Cursors.Hand;
             btnCadastrar.CustomizableEdges = customizableEdges9;
             btnCadastrar.DisabledState.BorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -298,6 +303,7 @@
             // btnEntrar
             // 
             btnEntrar.BorderRadius = 20;
+            btnEntrar.Cursor = Cursors.Hand;
             btnEntrar.CustomizableEdges = customizableEdges11;
             btnEntrar.DisabledState.BorderColor = Color.DarkGray;
             btnEntrar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -317,16 +323,17 @@
             // lblEsqueciSenha
             // 
             lblEsqueciSenha.BackColor = Color.Transparent;
-            lblEsqueciSenha.Font = new Font("Century Gothic", 10F, FontStyle.Bold);
+            lblEsqueciSenha.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             lblEsqueciSenha.Location = new Point(667, 403);
             lblEsqueciSenha.Name = "lblEsqueciSenha";
-            lblEsqueciSenha.Size = new Size(141, 18);
+            lblEsqueciSenha.Size = new Size(150, 18);
             lblEsqueciSenha.TabIndex = 2;
             lblEsqueciSenha.Text = "Esqueci minha senha";
             lblEsqueciSenha.Click += lblEsqueciSenha_Click;
             // 
             // btnKill
             // 
+            btnKill.Cursor = Cursors.Hand;
             btnKill.DisabledState.BorderColor = Color.DarkGray;
             btnKill.DisabledState.CustomBorderColor = Color.DarkGray;
             btnKill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -361,7 +368,7 @@
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(907, 580);
@@ -384,7 +391,7 @@
             Controls.Add(txtUsuario);
             Controls.Add(guna2TextBox3);
             Controls.Add(guna2TextBox1);
-            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
