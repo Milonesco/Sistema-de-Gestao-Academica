@@ -143,6 +143,7 @@
             btnUnidades.Size = new Size(100, 45);
             btnUnidades.TabIndex = 0;
             btnUnidades.Text = "Unidades";
+            btnUnidades.Click += btnUnidades_Click;
             // 
             // btnCursos
             // 
@@ -163,6 +164,7 @@
             btnCursos.Size = new Size(106, 45);
             btnCursos.TabIndex = 0;
             btnCursos.Text = "Cursos";
+            btnCursos.Click += btnCursos_Click;
             // 
             // btnAlunos
             // 
@@ -291,15 +293,14 @@
             pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbFoto.TabIndex = 2;
             pbFoto.TabStop = false;
-            pbFoto.Click += pbFoto_Click;
             // 
             // lblUsername
             // 
             lblUsername.BackColor = Color.Transparent;
-            lblUsername.Font = new Font("Century Gothic", 10F);
+            lblUsername.Font = new Font("Microsoft Sans Serif", 10F);
             lblUsername.Location = new Point(17, 19);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(115, 19);
+            lblUsername.Size = new Size(109, 18);
             lblUsername.TabIndex = 3;
             lblUsername.Text = "Nome do Usuário";
             lblUsername.Click += lblUsername_Click;

@@ -55,19 +55,20 @@
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnAtualizar = new Guna.UI2.WinForms.Guna2Button();
             btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
-            pbAluno = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pbFoto = new Guna.UI2.WinForms.Guna2PictureBox();
+            lblFoto = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtFotoCaminho = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgAlunos = new Guna.UI2.WinForms.Guna2DataGridView();
             cboCurso = new Guna.UI2.WinForms.Guna2ComboBox();
             cboUnidade = new Guna.UI2.WinForms.Guna2ComboBox();
-            ((System.ComponentModel.ISupportInitialize)pbAluno).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgAlunos).BeginInit();
             SuspendLayout();
             // 
             // txtPesquisa
             // 
             txtPesquisa.BorderRadius = 15;
+            txtPesquisa.Cursor = Cursors.IBeam;
             txtPesquisa.CustomizableEdges = customizableEdges1;
             txtPesquisa.DefaultText = "";
             txtPesquisa.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -84,12 +85,13 @@
             txtPesquisa.SelectedText = "";
             txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtPesquisa.Size = new Size(376, 36);
-            txtPesquisa.TabIndex = 0;
+            txtPesquisa.TabIndex = 6;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // txtNome
             // 
             txtNome.BorderRadius = 15;
+            txtNome.Cursor = Cursors.IBeam;
             txtNome.CustomizableEdges = customizableEdges3;
             txtNome.DefaultText = "";
             txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -111,6 +113,7 @@
             // btnPesquisa
             // 
             btnPesquisa.BorderRadius = 15;
+            btnPesquisa.Cursor = Cursors.Hand;
             btnPesquisa.CustomizableEdges = customizableEdges5;
             btnPesquisa.DisabledState.BorderColor = Color.DarkGray;
             btnPesquisa.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -123,13 +126,14 @@
             btnPesquisa.Name = "btnPesquisa";
             btnPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPesquisa.Size = new Size(97, 36);
-            btnPesquisa.TabIndex = 1;
+            btnPesquisa.TabIndex = 7;
             btnPesquisa.Text = "Pesquisar";
             btnPesquisa.Click += btnPesquisa_Click;
             // 
             // btnExcluir
             // 
             btnExcluir.BorderRadius = 20;
+            btnExcluir.Cursor = Cursors.Hand;
             btnExcluir.CustomizableEdges = customizableEdges7;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -142,13 +146,14 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnExcluir.Size = new Size(97, 51);
-            btnExcluir.TabIndex = 1;
+            btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // btnAtualizar
             // 
             btnAtualizar.BorderRadius = 20;
+            btnAtualizar.Cursor = Cursors.Hand;
             btnAtualizar.CustomizableEdges = customizableEdges9;
             btnAtualizar.DisabledState.BorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -161,13 +166,14 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnAtualizar.Size = new Size(97, 51);
-            btnAtualizar.TabIndex = 1;
+            btnAtualizar.TabIndex = 4;
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.Click += btnAtualizar_Click;
             // 
             // btnCadastrar
             // 
             btnCadastrar.BorderRadius = 20;
+            btnCadastrar.Cursor = Cursors.Hand;
             btnCadastrar.CustomizableEdges = customizableEdges11;
             btnCadastrar.DisabledState.BorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -180,43 +186,44 @@
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnCadastrar.Size = new Size(97, 51);
-            btnCadastrar.TabIndex = 1;
+            btnCadastrar.TabIndex = 3;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // pbAluno
+            // pbFoto
             // 
-            pbAluno.BorderStyle = BorderStyle.Fixed3D;
-            pbAluno.CustomizableEdges = customizableEdges13;
-            pbAluno.FillColor = Color.Transparent;
-            pbAluno.Image = Properties.Resources.user4;
-            pbAluno.ImageRotate = 0F;
-            pbAluno.Location = new Point(3, 25);
-            pbAluno.Name = "pbAluno";
-            pbAluno.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            pbAluno.Size = new Size(303, 109);
-            pbAluno.SizeMode = PictureBoxSizeMode.Zoom;
-            pbAluno.TabIndex = 2;
-            pbAluno.TabStop = false;
+            pbFoto.BorderStyle = BorderStyle.Fixed3D;
+            pbFoto.Cursor = Cursors.Hand;
+            pbFoto.CustomizableEdges = customizableEdges13;
+            pbFoto.FillColor = Color.Transparent;
+            pbFoto.Image = Properties.Resources.user4;
+            pbFoto.ImageRotate = 0F;
+            pbFoto.Location = new Point(3, 25);
+            pbFoto.Name = "pbFoto";
+            pbFoto.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pbFoto.Size = new Size(303, 109);
+            pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
+            pbFoto.TabIndex = 2;
+            pbFoto.TabStop = false;
             // 
-            // guna2HtmlLabel1
+            // lblFoto
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Location = new Point(5, 3);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(90, 17);
-            guna2HtmlLabel1.TabIndex = 3;
-            guna2HtmlLabel1.Text = "Selecione a foto:";
+            lblFoto.BackColor = Color.Transparent;
+            lblFoto.Location = new Point(5, 3);
+            lblFoto.Name = "lblFoto";
+            lblFoto.Size = new Size(90, 17);
+            lblFoto.TabIndex = 98;
+            lblFoto.Text = "Selecione a foto:";
             // 
-            // guna2HtmlLabel2
+            // txtFotoCaminho
             // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Location = new Point(5, 140);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(95, 17);
-            guna2HtmlLabel2.TabIndex = 3;
-            guna2HtmlLabel2.Text = "Caminho da Foto";
-            guna2HtmlLabel2.Visible = false;
+            txtFotoCaminho.BackColor = Color.Transparent;
+            txtFotoCaminho.Location = new Point(5, 140);
+            txtFotoCaminho.Name = "txtFotoCaminho";
+            txtFotoCaminho.Size = new Size(95, 17);
+            txtFotoCaminho.TabIndex = 99;
+            txtFotoCaminho.Text = "Caminho da Foto";
+            txtFotoCaminho.Visible = false;
             // 
             // dgAlunos
             // 
@@ -245,7 +252,8 @@
             dgAlunos.Name = "dgAlunos";
             dgAlunos.RowHeadersVisible = false;
             dgAlunos.Size = new Size(479, 285);
-            dgAlunos.TabIndex = 4;
+            dgAlunos.TabIndex = 8;
+            dgAlunos.TabStop = false;
             dgAlunos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgAlunos.ThemeStyle.AlternatingRowsStyle.Font = null;
             dgAlunos.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
@@ -273,6 +281,7 @@
             // 
             cboCurso.BackColor = Color.Transparent;
             cboCurso.BorderRadius = 15;
+            cboCurso.Cursor = Cursors.Hand;
             cboCurso.CustomizableEdges = customizableEdges15;
             cboCurso.DrawMode = DrawMode.OwnerDrawFixed;
             cboCurso.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -285,12 +294,13 @@
             cboCurso.Name = "cboCurso";
             cboCurso.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cboCurso.Size = new Size(301, 36);
-            cboCurso.TabIndex = 5;
+            cboCurso.TabIndex = 1;
             // 
             // cboUnidade
             // 
             cboUnidade.BackColor = Color.Transparent;
             cboUnidade.BorderRadius = 15;
+            cboUnidade.Cursor = Cursors.Hand;
             cboUnidade.CustomizableEdges = customizableEdges17;
             cboUnidade.DrawMode = DrawMode.OwnerDrawFixed;
             cboUnidade.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -303,7 +313,7 @@
             cboUnidade.Name = "cboUnidade";
             cboUnidade.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cboUnidade.Size = new Size(301, 36);
-            cboUnidade.TabIndex = 5;
+            cboUnidade.TabIndex = 2;
             // 
             // ucAlunos
             // 
@@ -312,9 +322,9 @@
             Controls.Add(cboUnidade);
             Controls.Add(cboCurso);
             Controls.Add(dgAlunos);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2HtmlLabel1);
-            Controls.Add(pbAluno);
+            Controls.Add(txtFotoCaminho);
+            Controls.Add(lblFoto);
+            Controls.Add(pbFoto);
             Controls.Add(btnCadastrar);
             Controls.Add(btnAtualizar);
             Controls.Add(btnExcluir);
@@ -324,7 +334,7 @@
             Name = "ucAlunos";
             Size = new Size(805, 401);
             Load += ucAlunos_Load;
-            ((System.ComponentModel.ISupportInitialize)pbAluno).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgAlunos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -338,9 +348,9 @@
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnAtualizar;
         private Guna.UI2.WinForms.Guna2Button btnCadastrar;
-        private Guna.UI2.WinForms.Guna2PictureBox pbAluno;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2PictureBox pbFoto;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFoto;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtFotoCaminho;
         private Guna.UI2.WinForms.Guna2DataGridView dgAlunos;
         private Guna.UI2.WinForms.Guna2ComboBox cboCurso;
         private Guna.UI2.WinForms.Guna2ComboBox cboUnidade;

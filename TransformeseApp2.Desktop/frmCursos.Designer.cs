@@ -69,6 +69,7 @@
             txtBusca.Name = "txtBusca";
             txtBusca.Size = new Size(569, 23);
             txtBusca.TabIndex = 5;
+            txtBusca.TextChanged += txtBusca_TextChanged;
             // 
             // btnBusca
             // 
@@ -146,6 +147,7 @@
             txtCargaHoraria.Name = "txtCargaHoraria";
             txtCargaHoraria.Size = new Size(228, 23);
             txtCargaHoraria.TabIndex = 13;
+            txtCargaHoraria.TextChanged += txtCargaHoraria_TextChanged;
             // 
             // btnAtualizar
             // 

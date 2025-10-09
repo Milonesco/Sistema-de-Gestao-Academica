@@ -27,7 +27,7 @@ namespace TransformeseApp2.BLL
                 throw new Exception("Nome é obrigatório.");
 
 
-            // Atualiza os campos do aluno
+            // Atualiza os campos do curso
             cursoExistente.Nome = cursoDTO.Nome;
             cursoExistente.Id = cursoDTO.Id;
             cursoExistente.CargaHoraria = cursoDTO.CargaHoraria;

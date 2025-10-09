@@ -8,31 +8,16 @@ namespace TransformeseApp2.Desktop
     {
         private readonly AlunoBLL alunoBLL = new();
         private int? alunoSelecionadoId = null;
+
+        string diretorio = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)}\transformese";
+
+        string diretorioImagens = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)}";
         public ucAlunos()
         {
             InitializeComponent();
         }
         private void ucAlunos_Load(object sender, EventArgs e)
         {
-            if (!Database.Cursos.Any())
-            {
-                Database.Cursos.Add(new CursoDTO { Id = 1, Nome = "Programador de Sistemas" });
-                Database.Cursos.Add(new CursoDTO { Id = 2, Nome = "Banco de Dados" });
-            }
-
-            if (!Database.Unidades.Any())
-            {
-                Database.Unidades.Add(new UnidadeDTO { Id = 1, Nome = "SMP - São Miguel Paulista" });
-                Database.Unidades.Add(new UnidadeDTO { Id = 2, Nome = "ITQ - Itaquera" });
-            }
-
-            if (!Database.Alunos.Any())
-            {
-                Database.Alunos.Add(new AlunoDTO { Id = 1, Nome = "Ana Silva", CursoId = 1, UnidadeId = 1 });
-                Database.Alunos.Add(new AlunoDTO { Id = 2, Nome = "Jorge von Estranho", CursoId = 2, UnidadeId = 1 });
-                Database.Alunos.Add(new AlunoDTO { Id = 3, Nome = "Glebenson", CursoId = 2, UnidadeId = 2 });
-            }
-
             //Populando ComboBox de Cursos
             cboCurso.DataSource = Database.Cursos; //Obtendo lista completa de cursos
             cboCurso.DisplayMember = "Nome"; // Atributo que será exibido no Combo Box
@@ -157,7 +142,7 @@ namespace TransformeseApp2.Desktop
 
         private void dgAlunos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgAlunos.Rows[e.RowIndex];
 
@@ -174,6 +159,11 @@ namespace TransformeseApp2.Desktop
             }
         }
 
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            BuscarAluno();
+        }
         private void BuscarAluno()
         {
             string termo = txtPesquisa.Text.Trim().ToLower();
@@ -190,9 +180,54 @@ namespace TransformeseApp2.Desktop
             dgAlunos.DataSource = filtrados;
         }
 
-        private void btnPesquisa_Click(object sender, EventArgs e)
+        private void pbFoto_Click(object sender, EventArgs e)
         {
-            BuscarAluno();
+            if (!Directory.Exists(diretorio))
+            {
+                Directory.CreateDirectory(diretorio);
+            }
+
+            OpenFileDialog openFileDialog = new();
+            openFileDialog.InitialDirectory = diretorioImagens;
+            openFileDialog.Filter = "Arquivos de Imagem |*.jpg;*.jpeg;*.png;*.gif;";
+            openFileDialog.Title = "Selecione uma imagem";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = openFileDialog.FileName;
+
+                //Exibe a imagem escolhida no PictureBox
+
+                pbFoto.Image = Image.FromFile(nomeArquivoImagem);
+
+                //Salva o caminho da foto
+                txtFotoCaminho.Text = nomeArquivoImagem;
+            }
+        }
+
+        private void lblFoto_Click(object sender, EventArgs e)
+        {
+            if (!Directory.Exists(diretorio))
+            {
+                Directory.CreateDirectory(diretorio);
+            }
+
+            OpenFileDialog openFileDialog = new();
+            openFileDialog.InitialDirectory = diretorioImagens;
+            openFileDialog.Filter = "Arquivos de Imagem |*.jpg;*.jpeg;*.png;*.gif;";
+            openFileDialog.Title = "Selecione uma imagem";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = openFileDialog.FileName;
+
+                //Exibe a imagem escolhida no PictureBox
+
+                pbFoto.Image = Image.FromFile(nomeArquivoImagem);
+
+                //Salva o caminho da foto
+                txtFotoCaminho.Text = nomeArquivoImagem;
+            }
         }
     }
 }

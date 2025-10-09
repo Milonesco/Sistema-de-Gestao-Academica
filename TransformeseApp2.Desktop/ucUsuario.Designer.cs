@@ -60,7 +60,7 @@
             txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             dgUsuario = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblFoto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgUsuario).BeginInit();
             SuspendLayout();
@@ -74,6 +74,7 @@
             txtFotoCaminho.TabIndex = 99;
             txtFotoCaminho.Text = "Caminho da Foto";
             txtFotoCaminho.Visible = false;
+            txtFotoCaminho.Click += txtFotoCaminho_Click;
             // 
             // pbFoto
             // 
@@ -184,6 +185,7 @@
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAtualizar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizar.Enabled = false;
             btnAtualizar.FillColor = Color.Blue;
             btnAtualizar.Font = new Font("Segoe UI", 9F);
             btnAtualizar.ForeColor = Color.White;
@@ -264,7 +266,7 @@
             dgUsuario.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -274,7 +276,7 @@
             dgUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
@@ -286,6 +288,7 @@
             dgUsuario.RowHeadersVisible = false;
             dgUsuario.Size = new Size(479, 285);
             dgUsuario.TabIndex = 8;
+            dgUsuario.TabStop = false;
             dgUsuario.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgUsuario.ThemeStyle.AlternatingRowsStyle.Font = null;
             dgUsuario.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
@@ -309,21 +312,22 @@
             dgUsuario.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgUsuario.CellClick += dgUsuario_CellClick;
             // 
-            // guna2HtmlLabel1
+            // lblFoto
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Location = new Point(5, 3);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(92, 17);
-            guna2HtmlLabel1.TabIndex = 6;
-            guna2HtmlLabel1.Text = "Selecione a Foto:";
+            lblFoto.BackColor = Color.Transparent;
+            lblFoto.Location = new Point(5, 3);
+            lblFoto.Name = "lblFoto";
+            lblFoto.Size = new Size(92, 17);
+            lblFoto.TabIndex = 6;
+            lblFoto.Text = "Selecione a Foto:";
+            lblFoto.Click += lblFoto_Click;
             // 
             // ucUsuario
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(lblFoto);
             Controls.Add(dgUsuario);
             Controls.Add(btnPesquisar);
             Controls.Add(btnExcluir);
@@ -335,7 +339,7 @@
             Controls.Add(txtNome);
             Controls.Add(pbFoto);
             Controls.Add(txtFotoCaminho);
-            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "ucUsuario";
             Size = new Size(805, 401);
             Load += ucUsuario_Load;
@@ -358,6 +362,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
         private Guna.UI2.WinForms.Guna2Button btnPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgUsuario;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFoto;
     }
 }

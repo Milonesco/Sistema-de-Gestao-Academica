@@ -4,15 +4,18 @@ using TransformeseApp2.DTO;
 
 namespace TransformeseApp2.Desktop
 {
-    public partial class frmCursos : Form
+    public partial class ucCursos : UserControl
     {
         private readonly CursoBLL cursoBLL = new();
         private int? cursoSelecionadoId = null;
 
-
-        public frmCursos()
+        public ucCursos()
         {
             InitializeComponent();
+        }
+        private void ucCursos_Load(object sender, EventArgs e)
+        {
+            AtualizarGrid();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -39,7 +42,6 @@ namespace TransformeseApp2.Desktop
         }
 
 
-
         private void AtualizarGrid()
         {
             var lista = cursoBLL.ListarCursos()
@@ -47,7 +49,7 @@ namespace TransformeseApp2.Desktop
                                 {
                                     curso.Id,
                                     curso.Nome,
-                                    CargaHoraria = curso.CargaHoraria
+                                    curso.CargaHoraria
                                 }).ToList();
 
             dgCursos.DataSource = lista;
@@ -89,11 +91,6 @@ namespace TransformeseApp2.Desktop
             }
         }
 
-        private void dgCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            AtualizarGrid();
-        }
-
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             if (cursoSelecionadoId != null)
@@ -105,10 +102,10 @@ namespace TransformeseApp2.Desktop
                     {
                         Id = cursoSelecionadoId.Value,
                         Nome = txtNome.Text,
-                        CargaHoraria = cursoSelecionadoId.Value,
+                        CargaHoraria = int.Parse(txtCargaHoraria.Text),
                     };
                     cursoBLL.AtualizarCurso(cursoAtualizado);
-                    MessageBox.Show($"Aluno {cursoAtualizado.Nome} atualizado com sucesso!");
+                    MessageBox.Show($"Curso {cursoAtualizado.Nome} atualizado com sucesso!");
                     txtNome.Clear();
                     cursoSelecionadoId = null;
                     AtualizarGrid();
@@ -134,19 +131,27 @@ namespace TransformeseApp2.Desktop
 
                 txtNome.Text = Database.Cursos.First(c => c.Nome == nomeCurso).Nome;
                 txtCargaHoraria.Text = Database.Cursos.First(u => u.Nome == nomeCurso).CargaHoraria.ToString();
-
-                btnAtualizar.Enabled = true;
             }
         }
 
-        private void txtCargaHoraria_TextChanged(object sender, EventArgs e)
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-
+            BuscarCurso();
         }
 
-        private void txtBusca_TextChanged(object sender, EventArgs e)
+        private void BuscarCurso()
         {
+            string termo = txtPesquisa.Text.Trim().ToLower();
 
+            var filtrados = cursoBLL.ListarCursos()
+                                         .Where(curso => curso.Nome.ToLower().Contains(termo))
+                                         .Select(curso => new
+                                         {
+                                             curso.Id,
+                                             curso.Nome,
+                                             curso.CargaHoraria
+                                         }).ToList();
+            dgCursos.DataSource = filtrados;
         }
     }
 }

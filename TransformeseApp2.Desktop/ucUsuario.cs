@@ -50,6 +50,31 @@ namespace TransformeseApp2.Desktop
             }
         }
 
+        private void lblFoto_Click(object sender, EventArgs e)
+        {
+            if (!Directory.Exists(diretorio))
+            {
+                Directory.CreateDirectory(diretorio);
+            }
+
+            OpenFileDialog openFileDialog = new();
+            openFileDialog.InitialDirectory = diretorioImagens;
+            openFileDialog.Filter = "Arquivos de Imagem |*.jpg;*.jpeg;*.png;*.gif;";
+            openFileDialog.Title = "Selecione uma imagem";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = openFileDialog.FileName;
+
+                //Exibe a imagem escolhida no PictureBox
+
+                pbFoto.Image = Image.FromFile(nomeArquivoImagem);
+
+                //Salva o caminho da foto
+                txtFotoCaminho.Text = nomeArquivoImagem;
+            }
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             // Nome da imagem a ser salva
@@ -124,26 +149,45 @@ namespace TransformeseApp2.Desktop
         {
             if (usuarioSelecionadoId != null)
             {
-                btnAtualizar.Enabled = true;
                 try
                 {
+                    string urlImagemAtualizada = txtFotoCaminho.Text;
+
+                    if (pbFoto.Image != null && !string.IsNullOrEmpty(txtFotoCaminho.Text))
+                    {
+                        string nomeImg = $"{usuarioSelecionadoId.Value} - {txtUsuario.Text}.jpg";
+
+                        urlImagemAtualizada = Path.Combine(diretorio, nomeImg);
+
+                        Image imagem = pbFoto.Image;
+                        imagem.Save(urlImagemAtualizada);
+                    }
+
                     var usuarioAtualizado = new UsuarioDTO
                     {
                         Id = usuarioSelecionadoId.Value,
                         Nome = txtNome.Text,
                         Login = txtUsuario.Text,
                         Senha = txtSenha.Text,
+                        UrlFoto = urlImagemAtualizada
                     };
+
                     UsuarioBLL.AtualizarUsuario(usuarioAtualizado);
-                    MessageBox.Show($"Usuario {usuarioAtualizado.Nome} atualizado com sucesso!");
+                    MessageBox.Show($"Usuário {usuarioAtualizado.Nome} atualizado com sucesso!");
+
                     txtNome.Clear();
+                    txtUsuario.Clear();
+                    txtSenha.Clear();
+                    txtFotoCaminho.ClearSelection();
+                    pbFoto.Image = null;
                     usuarioSelecionadoId = null;
+                    btnAtualizar.Enabled = false;
+
                     AtualizarGrid();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Erro: {ex.Message}");
-                    throw;
                 }
             }
         }
@@ -201,6 +245,10 @@ namespace TransformeseApp2.Desktop
             dgUsuario.DataSource = filtrados;
         }
 
+        private void txtFotoCaminho_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

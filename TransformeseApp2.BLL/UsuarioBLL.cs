@@ -35,6 +35,7 @@ namespace TransformeseApp2.BLL
             usuarioExistente.Nome = usuarioDTO.Nome;
             usuarioExistente.Login = usuarioDTO.Login;
             usuarioExistente.Senha = usuarioDTO.Senha;
+            usuarioExistente.UrlFoto = usuarioDTO.UrlFoto;
         }
 
         public void CadastrarUsuario(UsuarioDTO usuario)

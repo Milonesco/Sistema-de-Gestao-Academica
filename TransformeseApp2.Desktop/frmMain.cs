@@ -68,13 +68,13 @@ namespace TransformeseApp2.Desktop
 
         private void AtualizarUsuarioLogado()
         {
+            lblUsername.Text = Session.UsuarioLogado.Nome ?? "Usuário";
 
             // Centralizar horizontalmente o lblUsername em relação ao pbFoto
             lblUsername.Left = pbFoto.Left + (pbFoto.Width - lblUsername.Width) / 2;
 
             lblUsername.Top = pbFoto.Bottom + 4;
 
-            lblUsername.Text = Session.UsuarioLogado.Nome ?? "Usuário";
 
             if (!string.IsNullOrEmpty(Session.UsuarioLogado.UrlFoto) && File.Exists(Session.UsuarioLogado.UrlFoto))
             {
@@ -107,11 +107,6 @@ namespace TransformeseApp2.Desktop
             }
         }
 
-        private void pbFoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             panelConteudo.Controls.Clear();
@@ -126,6 +121,18 @@ namespace TransformeseApp2.Desktop
         {
             panelConteudo.Controls.Clear();
             AbrirUserControl(new ucAlunos());
+        }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            AbrirUserControl(new ucCursos());
+        }
+
+        private void btnUnidades_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            AbrirUserControl(new ucUnidades());
         }
     }
 }
