@@ -31,15 +31,15 @@ namespace TransformeseApp2.Desktop
 
             if (senhaVisivel)
             {
-                txtNovaSenha.PasswordChar = '●';
-                txtNovaSenha2.PasswordChar = '●';
+                txtNovaSenha.PasswordChar = '\0';
+                txtNovaSenha2.PasswordChar = '\0';
                 txtNovaSenha.IconRight = Properties.Resources.eye_open;
                 txtNovaSenha2.IconRight = Properties.Resources.eye_open;
             }
             else
             {
-                txtNovaSenha.PasswordChar = '\0';
-                txtNovaSenha2.PasswordChar = '\0';
+                txtNovaSenha.PasswordChar = '●';
+                txtNovaSenha2.PasswordChar = '●';
                 txtNovaSenha.IconRight = Properties.Resources.eye_closed;
                 txtNovaSenha2.IconRight = Properties.Resources.eye_closed;
             }
@@ -71,8 +71,6 @@ namespace TransformeseApp2.Desktop
 
             ttpForcaSenha.SetToolTip(txtNovaSenha, mensagemTooltip);
             ttpForcaSenha.SetToolTip(pgbNovaSenha, mensagemTooltip);
-            ttpForcaSenha.SetToolTip(pgbNovaSenha2, mensagemTooltip);
-
             ValidarConfirmacaoSenha(txtNovaSenha2, EventArgs.Empty);
         }
 
@@ -174,6 +172,11 @@ namespace TransformeseApp2.Desktop
             MessageBox.Show("Senha alterada com sucesso!", "Sucesso",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

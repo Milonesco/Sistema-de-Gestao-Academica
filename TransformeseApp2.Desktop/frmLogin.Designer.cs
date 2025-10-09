@@ -95,6 +95,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Enabled = false;
             pictureBox3.Image = Properties.Resources.logo1;
             pictureBox3.Location = new Point(485, 12);
             pictureBox3.Name = "pictureBox3";
@@ -105,6 +106,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.Enabled = false;
             pictureBox4.Image = Properties.Resources.user;
             pictureBox4.Location = new Point(569, 120);
             pictureBox4.Name = "pictureBox4";
@@ -116,6 +118,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.FromArgb(140, 10, 126);
+            pictureBox6.Enabled = false;
             pictureBox6.Image = Properties.Resources.woman_login;
             pictureBox6.Location = new Point(22, 82);
             pictureBox6.Name = "pictureBox6";
@@ -248,6 +251,7 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.FromArgb(140, 10, 126);
+            guna2HtmlLabel3.Enabled = false;
             guna2HtmlLabel3.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.White;
             guna2HtmlLabel3.Location = new Point(107, 346);
@@ -324,11 +328,11 @@
             // 
             lblEsqueciSenha.BackColor = Color.Transparent;
             lblEsqueciSenha.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            lblEsqueciSenha.Location = new Point(667, 403);
+            lblEsqueciSenha.Location = new Point(708, 403);
             lblEsqueciSenha.Name = "lblEsqueciSenha";
-            lblEsqueciSenha.Size = new Size(150, 18);
+            lblEsqueciSenha.Size = new Size(112, 18);
             lblEsqueciSenha.TabIndex = 2;
-            lblEsqueciSenha.Text = "Esqueci minha senha";
+            lblEsqueciSenha.Text = "Reset de senha";
             lblEsqueciSenha.Click += lblEsqueciSenha_Click;
             // 
             // btnKill

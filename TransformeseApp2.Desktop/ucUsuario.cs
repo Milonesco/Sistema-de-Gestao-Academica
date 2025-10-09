@@ -13,6 +13,7 @@ namespace TransformeseApp2.Desktop
 
         string diretorioImagens = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)}";
 
+
         public ucUsuario()
         {
             InitializeComponent();

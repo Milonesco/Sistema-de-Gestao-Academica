@@ -105,6 +105,7 @@
             // 
             // btnSair
             // 
+            btnSair.Cursor = Cursors.Hand;
             btnSair.CustomizableEdges = customizableEdges8;
             btnSair.DisabledState.BorderColor = Color.DarkGray;
             btnSair.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -126,6 +127,7 @@
             // 
             // btnUnidades
             // 
+            btnUnidades.Cursor = Cursors.Hand;
             btnUnidades.CustomizableEdges = customizableEdges10;
             btnUnidades.DisabledState.BorderColor = Color.DarkGray;
             btnUnidades.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -144,6 +146,7 @@
             // 
             // btnCursos
             // 
+            btnCursos.Cursor = Cursors.Hand;
             btnCursos.CustomizableEdges = customizableEdges12;
             btnCursos.DisabledState.BorderColor = Color.DarkGray;
             btnCursos.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -163,6 +166,7 @@
             // 
             // btnAlunos
             // 
+            btnAlunos.Cursor = Cursors.Hand;
             btnAlunos.CustomizableEdges = customizableEdges14;
             btnAlunos.DisabledState.BorderColor = Color.DarkGray;
             btnAlunos.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -178,9 +182,11 @@
             btnAlunos.Size = new Size(92, 45);
             btnAlunos.TabIndex = 0;
             btnAlunos.Text = "Alunos";
+            btnAlunos.Click += btnAlunos_Click;
             // 
             // btnUsuarios
             // 
+            btnUsuarios.Cursor = Cursors.Hand;
             btnUsuarios.CustomizableEdges = customizableEdges16;
             btnUsuarios.DisabledState.BorderColor = Color.DarkGray;
             btnUsuarios.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -200,6 +206,7 @@
             // 
             // btnHome
             // 
+            btnHome.Cursor = Cursors.Hand;
             btnHome.CustomizableEdges = customizableEdges18;
             btnHome.DisabledState.BorderColor = Color.DarkGray;
             btnHome.DisabledState.CustomBorderColor = Color.DarkGray;

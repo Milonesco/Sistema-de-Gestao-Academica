@@ -1,5 +1,4 @@
-﻿using System.Security.Policy;
-using TransformeseApp2.BLL;
+﻿using TransformeseApp2.BLL;
 
 namespace TransformeseApp2.Desktop
 {
@@ -9,12 +8,12 @@ namespace TransformeseApp2.Desktop
         {
             InitializeComponent();
         }
-
         private void frmMain_Load(object sender, EventArgs e)
         {
             AtualizarUsuarioLogado();
             AbrirUserControl(new ucHome());
         }
+
 
         private void AbrirUserControl(UserControl uc)
         {
@@ -31,7 +30,17 @@ namespace TransformeseApp2.Desktop
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
+            var confirmacao = MessageBox.Show(
+            $"Deseja sair do programa?",
+            "Confirmação", MessageBoxButtons.YesNo);
+            if (confirmacao == DialogResult.Yes)
+            {
+                this.FecharMain();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -107,6 +116,16 @@ namespace TransformeseApp2.Desktop
         {
             panelConteudo.Controls.Clear();
             AbrirUserControl(new ucUsuario());
+        }
+        private void pbNightMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlunos_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            AbrirUserControl(new ucAlunos());
         }
     }
 }
