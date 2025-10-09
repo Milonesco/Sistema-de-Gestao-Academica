@@ -1,18 +1,42 @@
-# Pasta do Visual Studio
-.vs/
-
-# Pastas de compilação
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
 [Bb]in/
 [Oo]bj/
+[Ll]og/
+[Ll]ogs/
 
-# Arquivos de usuário específicos
+# Visual Studio cache/options
+.vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# Outros
+# Build outputs
 *.dll
-*.exe
 *.pdb
-*.nupkg
+*.exe
+*.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.assets.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.FileListAbsolute.txt
+project.assets.json
+project.fragment.lock.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
