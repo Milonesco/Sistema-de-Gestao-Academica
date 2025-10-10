@@ -69,6 +69,7 @@
             btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             npNotifica = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
             mdNotifica = new Guna.UI2.WinForms.Guna2MessageDialog();
+            mdConfirmar = new Guna.UI2.WinForms.Guna2MessageDialog();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -137,10 +138,11 @@
             btnUnidades.Font = new Font("Segoe UI", 9F);
             btnUnidades.ForeColor = Color.White;
             btnUnidades.Image = Properties.Resources.unidades2;
-            btnUnidades.Location = new Point(6, 218);
+            btnUnidades.Location = new Point(0, 247);
+            btnUnidades.Margin = new Padding(0, 5, 0, 0);
             btnUnidades.Name = "btnUnidades";
             btnUnidades.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            btnUnidades.Size = new Size(100, 45);
+            btnUnidades.Size = new Size(115, 45);
             btnUnidades.TabIndex = 0;
             btnUnidades.Text = "Unidades";
             btnUnidades.Click += btnUnidades_Click;
@@ -157,11 +159,11 @@
             btnCursos.Font = new Font("Segoe UI", 9F);
             btnCursos.ForeColor = Color.White;
             btnCursos.Image = Properties.Resources.cursos2;
-            btnCursos.ImageAlign = HorizontalAlignment.Left;
-            btnCursos.Location = new Point(6, 167);
+            btnCursos.Location = new Point(0, 202);
+            btnCursos.Margin = new Padding(0, 5, 0, 0);
             btnCursos.Name = "btnCursos";
             btnCursos.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            btnCursos.Size = new Size(106, 45);
+            btnCursos.Size = new Size(115, 45);
             btnCursos.TabIndex = 0;
             btnCursos.Text = "Cursos";
             btnCursos.Click += btnCursos_Click;
@@ -178,10 +180,11 @@
             btnAlunos.Font = new Font("Segoe UI", 9F);
             btnAlunos.ForeColor = Color.White;
             btnAlunos.Image = Properties.Resources.addUser2;
-            btnAlunos.Location = new Point(11, 116);
+            btnAlunos.Location = new Point(0, 157);
+            btnAlunos.Margin = new Padding(0, 5, 0, 0);
             btnAlunos.Name = "btnAlunos";
             btnAlunos.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            btnAlunos.Size = new Size(92, 45);
+            btnAlunos.Size = new Size(115, 45);
             btnAlunos.TabIndex = 0;
             btnAlunos.Text = "Alunos";
             btnAlunos.Click += btnAlunos_Click;
@@ -198,10 +201,11 @@
             btnUsuarios.Font = new Font("Segoe UI", 9F);
             btnUsuarios.ForeColor = Color.White;
             btnUsuarios.Image = Properties.Resources.users2;
-            btnUsuarios.Location = new Point(11, 65);
+            btnUsuarios.Location = new Point(0, 112);
+            btnUsuarios.Margin = new Padding(0, 5, 0, 0);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            btnUsuarios.Size = new Size(92, 45);
+            btnUsuarios.Size = new Size(115, 45);
             btnUsuarios.TabIndex = 0;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.Click += btnUsuarios_Click;
@@ -218,10 +222,11 @@
             btnHome.Font = new Font("Segoe UI", 9F);
             btnHome.ForeColor = Color.White;
             btnHome.Image = Properties.Resources.home3;
-            btnHome.Location = new Point(11, 14);
+            btnHome.Location = new Point(0, 67);
+            btnHome.Margin = new Padding(0, 5, 0, 0);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            btnHome.Size = new Size(92, 45);
+            btnHome.Size = new Size(115, 45);
             btnHome.TabIndex = 0;
             btnHome.Text = "Home";
             btnHome.Click += btnHome_Click;
@@ -349,6 +354,15 @@
             mdNotifica.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             mdNotifica.Text = null;
             // 
+            // mdConfirmar
+            // 
+            mdConfirmar.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            mdConfirmar.Caption = "Confirmação";
+            mdConfirmar.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            mdConfirmar.Parent = this;
+            mdConfirmar.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            mdConfirmar.Text = "Você deseja sair?";
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -396,5 +410,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2NotificationPaint npNotifica;
         private Guna.UI2.WinForms.Guna2MessageDialog mdNotifica;
+        private Guna.UI2.WinForms.Guna2MessageDialog mdConfirmar;
     }
 }
