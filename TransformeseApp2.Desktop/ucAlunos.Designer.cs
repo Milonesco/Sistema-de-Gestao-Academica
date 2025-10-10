@@ -40,18 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            btnPesquisa = new Guna.UI2.WinForms.Guna2Button();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnAtualizar = new Guna.UI2.WinForms.Guna2Button();
             btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
@@ -84,7 +81,7 @@
             txtPesquisa.PlaceholderText = "Pesquisa";
             txtPesquisa.SelectedText = "";
             txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtPesquisa.Size = new Size(376, 36);
+            txtPesquisa.Size = new Size(481, 36);
             txtPesquisa.TabIndex = 6;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
@@ -110,31 +107,11 @@
             txtNome.Size = new Size(303, 36);
             txtNome.TabIndex = 0;
             // 
-            // btnPesquisa
-            // 
-            btnPesquisa.BorderRadius = 15;
-            btnPesquisa.Cursor = Cursors.Hand;
-            btnPesquisa.CustomizableEdges = customizableEdges5;
-            btnPesquisa.DisabledState.BorderColor = Color.DarkGray;
-            btnPesquisa.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPesquisa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPesquisa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPesquisa.FillColor = Color.FromArgb(140, 10, 126);
-            btnPesquisa.Font = new Font("Segoe UI", 9F);
-            btnPesquisa.ForeColor = Color.White;
-            btnPesquisa.Location = new Point(696, 57);
-            btnPesquisa.Name = "btnPesquisa";
-            btnPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnPesquisa.Size = new Size(97, 36);
-            btnPesquisa.TabIndex = 7;
-            btnPesquisa.Text = "Pesquisar";
-            btnPesquisa.Click += btnPesquisa_Click;
-            // 
             // btnExcluir
             // 
             btnExcluir.BorderRadius = 20;
             btnExcluir.Cursor = Cursors.Hand;
-            btnExcluir.CustomizableEdges = customizableEdges7;
+            btnExcluir.CustomizableEdges = customizableEdges5;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -144,7 +121,7 @@
             btnExcluir.ForeColor = Color.White;
             btnExcluir.Location = new Point(211, 347);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnExcluir.Size = new Size(97, 51);
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
@@ -154,17 +131,18 @@
             // 
             btnAtualizar.BorderRadius = 20;
             btnAtualizar.Cursor = Cursors.Hand;
-            btnAtualizar.CustomizableEdges = customizableEdges9;
+            btnAtualizar.CustomizableEdges = customizableEdges7;
             btnAtualizar.DisabledState.BorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAtualizar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizar.Enabled = false;
             btnAtualizar.FillColor = Color.Blue;
             btnAtualizar.Font = new Font("Segoe UI", 9F);
             btnAtualizar.ForeColor = Color.White;
             btnAtualizar.Location = new Point(108, 347);
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAtualizar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAtualizar.Size = new Size(97, 51);
             btnAtualizar.TabIndex = 4;
             btnAtualizar.Text = "Atualizar";
@@ -174,7 +152,7 @@
             // 
             btnCadastrar.BorderRadius = 20;
             btnCadastrar.Cursor = Cursors.Hand;
-            btnCadastrar.CustomizableEdges = customizableEdges11;
+            btnCadastrar.CustomizableEdges = customizableEdges9;
             btnCadastrar.DisabledState.BorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -184,7 +162,7 @@
             btnCadastrar.ForeColor = Color.White;
             btnCadastrar.Location = new Point(3, 347);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnCadastrar.Size = new Size(97, 51);
             btnCadastrar.TabIndex = 3;
             btnCadastrar.Text = "Cadastrar";
@@ -194,13 +172,13 @@
             // 
             pbFoto.BorderStyle = BorderStyle.Fixed3D;
             pbFoto.Cursor = Cursors.Hand;
-            pbFoto.CustomizableEdges = customizableEdges13;
+            pbFoto.CustomizableEdges = customizableEdges11;
             pbFoto.FillColor = Color.Transparent;
             pbFoto.Image = Properties.Resources.user4;
             pbFoto.ImageRotate = 0F;
             pbFoto.Location = new Point(3, 25);
             pbFoto.Name = "pbFoto";
-            pbFoto.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pbFoto.ShadowDecoration.CustomizableEdges = customizableEdges12;
             pbFoto.Size = new Size(303, 109);
             pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbFoto.TabIndex = 2;
@@ -282,7 +260,7 @@
             cboCurso.BackColor = Color.Transparent;
             cboCurso.BorderRadius = 15;
             cboCurso.Cursor = Cursors.Hand;
-            cboCurso.CustomizableEdges = customizableEdges15;
+            cboCurso.CustomizableEdges = customizableEdges13;
             cboCurso.DrawMode = DrawMode.OwnerDrawFixed;
             cboCurso.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCurso.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -292,7 +270,7 @@
             cboCurso.ItemHeight = 30;
             cboCurso.Location = new Point(5, 233);
             cboCurso.Name = "cboCurso";
-            cboCurso.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cboCurso.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cboCurso.Size = new Size(301, 36);
             cboCurso.TabIndex = 1;
             // 
@@ -301,7 +279,7 @@
             cboUnidade.BackColor = Color.Transparent;
             cboUnidade.BorderRadius = 15;
             cboUnidade.Cursor = Cursors.Hand;
-            cboUnidade.CustomizableEdges = customizableEdges17;
+            cboUnidade.CustomizableEdges = customizableEdges15;
             cboUnidade.DrawMode = DrawMode.OwnerDrawFixed;
             cboUnidade.DropDownStyle = ComboBoxStyle.DropDownList;
             cboUnidade.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -311,7 +289,7 @@
             cboUnidade.ItemHeight = 30;
             cboUnidade.Location = new Point(5, 291);
             cboUnidade.Name = "cboUnidade";
-            cboUnidade.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cboUnidade.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cboUnidade.Size = new Size(301, 36);
             cboUnidade.TabIndex = 2;
             // 
@@ -328,7 +306,6 @@
             Controls.Add(btnCadastrar);
             Controls.Add(btnAtualizar);
             Controls.Add(btnExcluir);
-            Controls.Add(btnPesquisa);
             Controls.Add(txtNome);
             Controls.Add(txtPesquisa);
             Name = "ucAlunos";
@@ -344,7 +321,6 @@
 
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
-        private Guna.UI2.WinForms.Guna2Button btnPesquisa;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnAtualizar;
         private Guna.UI2.WinForms.Guna2Button btnCadastrar;
