@@ -131,6 +131,8 @@ namespace TransformeseApp2.Desktop
 
                 txtNome.Text = Database.Cursos.First(c => c.Nome == nomeCurso).Nome;
                 txtCargaHoraria.Text = Database.Cursos.First(u => u.Nome == nomeCurso).CargaHoraria.ToString();
+
+                btnAtualizar.Enabled = true;
             }
         }
 

@@ -43,16 +43,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgCursos = new Guna.UI2.WinForms.Guna2DataGridView();
             btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             btnAtualizar = new Guna.UI2.WinForms.Guna2Button();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
-            btnPesquisa = new Guna.UI2.WinForms.Guna2Button();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             txtCargaHoraria = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dgCursos).BeginInit();
             SuspendLayout();
             // 
@@ -137,6 +135,7 @@
             btnAtualizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAtualizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAtualizar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAtualizar.Enabled = false;
             btnAtualizar.FillColor = Color.Blue;
             btnAtualizar.Font = new Font("Segoe UI", 9F);
             btnAtualizar.ForeColor = Color.White;
@@ -168,30 +167,11 @@
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
-            // btnPesquisa
-            // 
-            btnPesquisa.BorderRadius = 15;
-            btnPesquisa.Cursor = Cursors.Hand;
-            btnPesquisa.CustomizableEdges = customizableEdges7;
-            btnPesquisa.DisabledState.BorderColor = Color.DarkGray;
-            btnPesquisa.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPesquisa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPesquisa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPesquisa.FillColor = Color.FromArgb(140, 10, 126);
-            btnPesquisa.Font = new Font("Segoe UI", 9F);
-            btnPesquisa.ForeColor = Color.White;
-            btnPesquisa.Location = new Point(700, 57);
-            btnPesquisa.Name = "btnPesquisa";
-            btnPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnPesquisa.Size = new Size(97, 36);
-            btnPesquisa.TabIndex = 6;
-            btnPesquisa.Text = "Pesquisar";
-            // 
             // txtNome
             // 
             txtNome.BorderRadius = 15;
             txtNome.Cursor = Cursors.IBeam;
-            txtNome.CustomizableEdges = customizableEdges9;
+            txtNome.CustomizableEdges = customizableEdges7;
             txtNome.DefaultText = "";
             txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -205,7 +185,7 @@
             txtNome.Name = "txtNome";
             txtNome.PlaceholderText = "Nome do Curso";
             txtNome.SelectedText = "";
-            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtNome.Size = new Size(303, 36);
             txtNome.TabIndex = 0;
             // 
@@ -213,7 +193,7 @@
             // 
             txtPesquisa.BorderRadius = 15;
             txtPesquisa.Cursor = Cursors.IBeam;
-            txtPesquisa.CustomizableEdges = customizableEdges11;
+            txtPesquisa.CustomizableEdges = customizableEdges9;
             txtPesquisa.DefaultText = "";
             txtPesquisa.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPesquisa.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -227,8 +207,8 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.PlaceholderText = "Pesquisa";
             txtPesquisa.SelectedText = "";
-            txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtPesquisa.Size = new Size(376, 36);
+            txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtPesquisa.Size = new Size(481, 36);
             txtPesquisa.TabIndex = 5;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
@@ -236,7 +216,7 @@
             // 
             txtCargaHoraria.BorderRadius = 15;
             txtCargaHoraria.Cursor = Cursors.IBeam;
-            txtCargaHoraria.CustomizableEdges = customizableEdges13;
+            txtCargaHoraria.CustomizableEdges = customizableEdges11;
             txtCargaHoraria.DefaultText = "";
             txtCargaHoraria.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCargaHoraria.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -250,19 +230,30 @@
             txtCargaHoraria.Name = "txtCargaHoraria";
             txtCargaHoraria.PlaceholderText = "Carga Horaria";
             txtCargaHoraria.SelectedText = "";
-            txtCargaHoraria.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtCargaHoraria.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtCargaHoraria.Size = new Size(303, 36);
             txtCargaHoraria.TabIndex = 1;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Enabled = false;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(45, 99);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(223, 34);
+            guna2HtmlLabel1.TabIndex = 16;
+            guna2HtmlLabel1.Text = "Cadastro de Cursos";
             // 
             // ucCursos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2HtmlLabel1);
             Controls.Add(dgCursos);
             Controls.Add(btnCadastrar);
             Controls.Add(btnAtualizar);
             Controls.Add(btnExcluir);
-            Controls.Add(btnPesquisa);
             Controls.Add(txtCargaHoraria);
             Controls.Add(txtNome);
             Controls.Add(txtPesquisa);
@@ -271,6 +262,7 @@
             Load += ucCursos_Load;
             ((System.ComponentModel.ISupportInitialize)dgCursos).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -279,9 +271,9 @@
         private Guna.UI2.WinForms.Guna2Button btnCadastrar;
         private Guna.UI2.WinForms.Guna2Button btnAtualizar;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
-        private Guna.UI2.WinForms.Guna2Button btnPesquisa;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
         private Guna.UI2.WinForms.Guna2TextBox txtCargaHoraria;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
