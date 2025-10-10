@@ -1,4 +1,5 @@
-﻿using TransformeseApp2.BLL;
+﻿using System.Data;
+using TransformeseApp2.BLL;
 using TransformeseApp2.DAL;
 using TransformeseApp2.DTO;
 
@@ -22,6 +23,7 @@ namespace TransformeseApp2.Desktop
         private void ucUsuario_Load(object sender, EventArgs e)
         {
             AtualizarGrid();
+            ConfigurarEventos();
         }
 
 
@@ -199,6 +201,59 @@ namespace TransformeseApp2.Desktop
 
         private void AtualizarGrid()
         {
+            dgUsuario.Columns.Clear();
+            dgUsuario.AutoGenerateColumns = false;
+            dgUsuario.RowTemplate.Height = 60;
+            dgUsuario.AllowUserToAddRows = false;
+
+            var colFoto = new DataGridViewImageColumn
+            {
+                HeaderText = "Foto",
+                Name = "Foto",
+                DataPropertyName = "Foto",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+            };
+
+            dgUsuario.Columns.Add(colFoto);
+
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "ID", Name = "Id" });
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome", Name = "Nome" });
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "User", HeaderText = "User", Name = "User" });
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Senha", HeaderText = "Senha", Name = "Senha" });
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UrlFoto", HeaderText = "UrlFoto", Name = "UrlFoto" });
+
+
+
+            var usuarios = UsuarioBLL.ListarUsuarios();
+
+            var dt = new DataTable();
+            dt.Columns.Add("Foto", typeof(Image));
+            dt.Columns.Add("Id", typeof(int));
+            dt.Columns.Add("Nome", typeof(string));
+            dt.Columns.Add("Login", typeof(string));
+            dt.Columns.Add("Senha", typeof(string));
+            dt.Columns.Add("UrlFoto", typeof(string));
+
+            foreach (var usuario in usuarios)
+            {
+                Image? image = null;
+                if (!string.IsNullOrEmpty(usuario.UrlFoto) && File.Exists(usuario.UrlFoto))
+                {
+                    try
+                    {
+                        using (var fs = new FileStream(usuario.UrlFoto, FileMode.Open, FileAccess.Read))
+                        {
+                            image = Image.FromStream(fs);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        image = null;
+                    }
+                }
+                dt.Rows.Add(image);
+            }
+
             var lista = UsuarioBLL.ListarUsuarios()
                                 .Select(usuario => new
                                 {
@@ -245,9 +300,29 @@ namespace TransformeseApp2.Desktop
             dgUsuario.DataSource = filtrados;
         }
 
-        private void txtFotoCaminho_Click(object sender, EventArgs e)
-        {
+        private bool senhaVisivel = false;
 
+        private void MostrarOcultarSenha(object sender, EventArgs e)
+        {
+            senhaVisivel = !senhaVisivel;
+
+            if (senhaVisivel)
+            {
+                txtSenha.PasswordChar = '\0';
+                txtSenha.IconRight = Properties.Resources.eye_open;
+            }
+            else
+            {
+                txtSenha.PasswordChar = '●';
+                txtSenha.IconRight = Properties.Resources.eye_closed;
+            }
+        }
+
+        private void ConfigurarEventos()
+        {
+            txtSenha.IconRightClick += MostrarOcultarSenha;
+            txtSenha.PasswordChar = '●';
+            senhaVisivel = false;
         }
     }
 }

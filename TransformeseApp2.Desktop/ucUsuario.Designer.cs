@@ -44,8 +44,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -58,7 +56,6 @@
             btnAtualizar = new Guna.UI2.WinForms.Guna2Button();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
-            btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             dgUsuario = new Guna.UI2.WinForms.Guna2DataGridView();
             lblFoto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
@@ -74,7 +71,6 @@
             txtFotoCaminho.TabIndex = 99;
             txtFotoCaminho.Text = "Caminho da Foto";
             txtFotoCaminho.Visible = false;
-            txtFotoCaminho.Click += txtFotoCaminho_Click;
             // 
             // pbFoto
             // 
@@ -148,6 +144,7 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSenha.IconRight = Properties.Resources.eye_open;
             txtSenha.Location = new Point(5, 291);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "Senha";
@@ -236,28 +233,9 @@
             txtPesquisa.PlaceholderText = "Pesquisa";
             txtPesquisa.SelectedText = "";
             txtPesquisa.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtPesquisa.Size = new Size(376, 36);
+            txtPesquisa.Size = new Size(481, 36);
             txtPesquisa.TabIndex = 6;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
-            // 
-            // btnPesquisar
-            // 
-            btnPesquisar.BorderRadius = 15;
-            btnPesquisar.Cursor = Cursors.Hand;
-            btnPesquisar.CustomizableEdges = customizableEdges17;
-            btnPesquisar.DisabledState.BorderColor = Color.DarkGray;
-            btnPesquisar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPesquisar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPesquisar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPesquisar.FillColor = Color.FromArgb(140, 10, 126);
-            btnPesquisar.Font = new Font("Segoe UI", 9F);
-            btnPesquisar.ForeColor = Color.White;
-            btnPesquisar.Location = new Point(696, 57);
-            btnPesquisar.Name = "btnPesquisar";
-            btnPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnPesquisar.Size = new Size(97, 36);
-            btnPesquisar.TabIndex = 7;
-            btnPesquisar.Text = "Pesquisar";
             // 
             // dgUsuario
             // 
@@ -329,7 +307,6 @@
             BackColor = SystemColors.Control;
             Controls.Add(lblFoto);
             Controls.Add(dgUsuario);
-            Controls.Add(btnPesquisar);
             Controls.Add(btnExcluir);
             Controls.Add(btnAtualizar);
             Controls.Add(btnCadastrar);
@@ -360,7 +337,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAtualizar;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
-        private Guna.UI2.WinForms.Guna2Button btnPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgUsuario;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblFoto;
     }
