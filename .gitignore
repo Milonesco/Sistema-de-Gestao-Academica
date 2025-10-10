@@ -33,6 +33,10 @@ bld/
 *.pdb
 *.cache
 
+# Backup e UpgradeLog
+Backup/
+UpgradeLog.htm
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
