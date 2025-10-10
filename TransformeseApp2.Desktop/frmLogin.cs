@@ -6,14 +6,38 @@ namespace TransformeseApp2.Desktop
     public partial class frmLogin : Form
     {
         private readonly UsuarioBLL usuarioBLL = new();
+        private bool senhaVisivel = false;
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void frmLogin_Load(object sender, EventArgs e)
         {
+            ConfigurarEventos();
+        }
 
+        private void MostrarOcultarSenha(object sender, EventArgs e)
+        {
+            senhaVisivel = !senhaVisivel;
+
+            if (senhaVisivel)
+            {
+                txtSenha.PasswordChar = '\0';
+                txtSenha.IconRight = Properties.Resources.eye_open;
+            }
+            else
+            {
+                txtSenha.PasswordChar = '●';
+                txtSenha.IconRight = Properties.Resources.eye_closed;
+            }
+        }
+
+        private void ConfigurarEventos()
+        {
+            txtSenha.IconRightClick += MostrarOcultarSenha;
+            txtSenha.PasswordChar = '●';
+            senhaVisivel = false;
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

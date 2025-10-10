@@ -238,6 +238,7 @@
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSenha.IconRight = Properties.Resources.eye_open;
             txtSenha.Location = new Point(527, 355);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "";
@@ -245,7 +246,6 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtSenha.Size = new Size(281, 35);
             txtSenha.TabIndex = 1;
-            txtSenha.UseSystemPasswordChar = true;
             txtSenha.KeyDown += txtSenha_KeyDown;
             // 
             // guna2HtmlLabel3
@@ -400,6 +400,7 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
