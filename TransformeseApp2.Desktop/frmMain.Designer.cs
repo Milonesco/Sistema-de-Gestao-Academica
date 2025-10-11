@@ -59,7 +59,7 @@
             btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox4 = new PictureBox();
+            pbColorMode = new PictureBox();
             pictureBox3 = new PictureBox();
             pbNotification = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -72,7 +72,7 @@
             mdConfirmar = new Guna.UI2.WinForms.Guna2MessageDialog();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbColorMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNotification).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -233,7 +233,7 @@
             // 
             // guna2Panel3
             // 
-            guna2Panel3.Controls.Add(pictureBox4);
+            guna2Panel3.Controls.Add(pbColorMode);
             guna2Panel3.Controls.Add(pictureBox3);
             guna2Panel3.Controls.Add(pbNotification);
             guna2Panel3.Controls.Add(pictureBox1);
@@ -244,15 +244,16 @@
             guna2Panel3.Size = new Size(805, 98);
             guna2Panel3.TabIndex = 1;
             // 
-            // pictureBox4
+            // pbColorMode
             // 
-            pictureBox4.Image = Properties.Resources.darkmode;
-            pictureBox4.Location = new Point(680, 36);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(30, 30);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
+            pbColorMode.Image = Properties.Resources.darkmode;
+            pbColorMode.Location = new Point(680, 36);
+            pbColorMode.Name = "pbColorMode";
+            pbColorMode.Size = new Size(30, 30);
+            pbColorMode.SizeMode = PictureBoxSizeMode.Zoom;
+            pbColorMode.TabIndex = 1;
+            pbColorMode.TabStop = false;
+            pbColorMode.Click += pbColorMode_Click;
             // 
             // pictureBox3
             // 
@@ -380,7 +381,7 @@
             Load += frmMain_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbColorMode).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbNotification).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -401,7 +402,7 @@
         private Guna.UI2.WinForms.Guna2Button btnCursos;
         private Guna.UI2.WinForms.Guna2Button btnAlunos;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox4;
+        private PictureBox pbColorMode;
         private PictureBox pictureBox3;
         private PictureBox pbNotification;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUsername;

@@ -136,5 +136,32 @@ namespace TransformeseApp2.Desktop
             panelConteudo.Controls.Clear();
             AbrirUserControl(new ucUnidades());
         }
+
+        private void pbColorMode_Click(object sender, EventArgs e)
+        {
+            bool isDarkMode = this.BackColor == Color.FromArgb(32, 32, 32);
+
+            if (isDarkMode)
+            {
+                // Modo Claro - Light Mode
+
+                Color lightBackColor = SystemColors.ButtonHighlight;
+                Color lightPanelColor = Color.WhiteSmoke;
+
+                this.BackColor = lightBackColor;
+                this.ForeColor = lightPanelColor;
+
+                panelConteudo.BackColor = lightPanelColor;
+                pbColorMode.Image = Properties.Resources.lightmode;
+            }
+            else
+            {
+
+            }
+
+
+            }
+        }
     }
 }
+
