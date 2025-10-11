@@ -22,6 +22,7 @@ namespace TransformeseApp2.Desktop
 
         private void ucUsuario_Load(object sender, EventArgs e)
         {
+            
             AtualizarGrid();
             ConfigurarEventos();
         }
@@ -101,7 +102,7 @@ namespace TransformeseApp2.Desktop
                 Nome = txtNome.Text,
                 Login = txtUsuario.Text,
                 Senha = txtSenha.Text,
-                UrlFoto = txtFotoCaminho.Text
+                UrlFoto = UrlImagem,
             };
 
             UsuarioBLL.CadastrarUsuario(usuario);
@@ -218,7 +219,7 @@ namespace TransformeseApp2.Desktop
 
             dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "ID", Name = "Id" });
             dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome", Name = "Nome" });
-            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "User", HeaderText = "User", Name = "User" });
+            dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Login", HeaderText = "User", Name = "Login" });
             dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Senha", HeaderText = "Senha", Name = "Senha" });
             dgUsuario.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UrlFoto", HeaderText = "UrlFoto", Name = "UrlFoto" });
 
@@ -251,30 +252,34 @@ namespace TransformeseApp2.Desktop
                         image = null;
                     }
                 }
-                dt.Rows.Add(image);
+                dt.Rows.Add(image, usuario.Id, usuario.Nome, usuario.Login, usuario.Senha, usuario.UrlFoto);
             }
 
-            var lista = UsuarioBLL.ListarUsuarios()
-                                .Select(usuario => new
-                                {
-                                    usuario.Id,
-                                    usuario.Nome,
-                                    usuario.Login,
-                                }).ToList();
-
-            dgUsuario.DataSource = lista;
-
+            dgUsuario.DataSource = dt;
         }
 
         private void dgUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgUsuario.Rows[e.RowIndex];
+            var row = dgUsuario.Rows[e.RowIndex];
+            var dataRow = row.DataBoundItem as DataRowView;
 
-                usuarioSelecionadoId = Convert.ToInt32(row.Cells["Id"].Value);
-                txtNome.Text = row.Cells["Nome"].Value.ToString();
-                txtUsuario.Text = row.Cells["Login"].Value.ToString();
+            if (dataRow != null)
+            {
+                usuarioSelecionadoId = Convert.ToInt32(dataRow["Id"]);
+                txtNome.Text = dataRow["Nome"].ToString();
+                txtUsuario.Text = dataRow["Login"].ToString();
+                txtSenha.Text = dataRow["Senha"].ToString();
+                txtFotoCaminho.Text = dataRow["UrlFoto"].ToString();
+
+
+                string caminho = dataRow["UrlFoto"].ToString();
+
+
+                pbFoto.Image = (!string.IsNullOrWhiteSpace(caminho) && File.Exists(caminho))
+                    ? Image.FromFile(caminho)
+                    : Properties.Resources.user;
+
+                btnAtualizar.Enabled = true;
 
                 btnAtualizar.Enabled = true;
             }
@@ -296,6 +301,7 @@ namespace TransformeseApp2.Desktop
                                              usuario.Id,
                                              usuario.Nome,
                                              usuario.Login,
+                                             usuario.Senha,
                                          }).ToList();
             dgUsuario.DataSource = filtrados;
         }
