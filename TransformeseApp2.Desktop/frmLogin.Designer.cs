@@ -163,7 +163,7 @@
             txtUsuario.BorderColor = SystemColors.ControlLight;
             txtUsuario.Cursor = Cursors.IBeam;
             txtUsuario.CustomizableEdges = customizableEdges3;
-            txtUsuario.DefaultText = "";
+            txtUsuario.DefaultText = "admin";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -229,7 +229,7 @@
             txtSenha.BorderColor = SystemColors.ControlLight;
             txtSenha.Cursor = Cursors.IBeam;
             txtSenha.CustomizableEdges = customizableEdges7;
-            txtSenha.DefaultText = "";
+            txtSenha.DefaultText = "admin123";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtSenha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -246,6 +246,7 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtSenha.Size = new Size(281, 35);
             txtSenha.TabIndex = 1;
+            txtSenha.UseSystemPasswordChar = true;
             txtSenha.KeyDown += txtSenha_KeyDown;
             // 
             // guna2HtmlLabel3
