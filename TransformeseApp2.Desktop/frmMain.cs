@@ -7,7 +7,6 @@ namespace TransformeseApp2.Desktop
         public frmMain()
         {
             InitializeComponent();
-            this.FormClosing += frmMain_FormClosing;
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -29,28 +28,9 @@ namespace TransformeseApp2.Desktop
 
         }
 
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var resultado = MessageBox.Show(
-                "Tem certeza que deseja sair do sistema?",
-                "Confirmar Saída",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (resultado == DialogResult.No)
-            {
-                e.Cancel = true; // Cancela o fechamento
-            }
-            else
-            {
-                Application.Exit(); // Fecha tudo
-            }
-        }
-
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FecharMain();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -60,7 +40,7 @@ namespace TransformeseApp2.Desktop
             "Confirmação", MessageBoxButtons.YesNo);
             if (confirmacao == DialogResult.Yes)
             {
-                this.FecharMain();
+                FecharMain();
             }
             else
             {
