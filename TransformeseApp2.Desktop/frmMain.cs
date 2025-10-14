@@ -1,4 +1,5 @@
-﻿using TransformeseApp2.BLL;
+﻿using System.Diagnostics;
+using TransformeseApp2.BLL;
 
 namespace TransformeseApp2.Desktop
 {
@@ -35,9 +36,7 @@ namespace TransformeseApp2.Desktop
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            var confirmacao = MessageBox.Show(
-            $"Deseja sair do programa?",
-            "Confirmação", MessageBoxButtons.YesNo);
+            var confirmacao = mdConfirmar.Show("Você realmente deseja sair?");
             if (confirmacao == DialogResult.Yes)
             {
                 FecharMain();
@@ -156,12 +155,65 @@ namespace TransformeseApp2.Desktop
             }
             else
             {
+                Color darkBackColor = Color.FromArgb(32, 32, 32);
+                Color darkPanelColor = Color.FromArgb(45, 45, 48);
 
+                this.BackColor = darkBackColor;
+                this.ForeColor = darkPanelColor;
+
+                panelConteudo.BackColor = darkPanelColor;
+                pbColorMode.Image = Properties.Resources.darkmode;
             }
 
 
+        }
+
+        private void pbSerasa_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://www.serasa.com.br/");
+        }
+
+        private void pbSenac_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://www.sp.senac.br/");
+        }
+
+        private void pbGerando_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://gerandofalcoes.com//");
+        }
+
+        private void AbrirLink(string url)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                mdNotifica.Show("Erro", $"Erro: {ex.Message}");
+            }
+        }
+
+        private void pbDiretorio_Click(object sender, EventArgs e)
+        {
+            string publica = @"T:\Publica\TRANSFORME-SE";
+
+            try
+            {
+                if (Directory.Exists(publica))
+                {
+                    Process.Start("explorer.exe", publica);
+                }
+                else
+                {
+                    mdNotifica.Show("Erro", "O diretório não foi encontrado ou está inacessivel.");
+                }
+            }
+            catch (Exception ex)
+            {
+                mdNotifica.Show("Erro", $"Erro: {ex.Message}");
             }
         }
     }
 }
-
