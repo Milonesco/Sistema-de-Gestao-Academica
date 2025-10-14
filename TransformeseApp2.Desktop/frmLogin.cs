@@ -1,4 +1,5 @@
-﻿using TransformeseApp2.BLL;
+﻿using System.Diagnostics;
+using TransformeseApp2.BLL;
 
 namespace TransformeseApp2.Desktop
 {
@@ -104,6 +105,33 @@ namespace TransformeseApp2.Desktop
             if (e.KeyCode == Keys.Enter)
             {
                 btnEntrar.PerformClick();
+            }
+        }
+
+        private void pbSerasa_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://www.serasa.com.br/");
+        }
+
+        private void pbSenac_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://www.sp.senac.br/");
+        }
+
+        private void pbGerando_Click(object sender, EventArgs e)
+        {
+            AbrirLink("https://gerandofalcoes.com//");
+        }
+
+        private void AbrirLink(string url)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                mdNotifica.Show("Erro", $"Erro: {ex.Message}");
             }
         }
     }
