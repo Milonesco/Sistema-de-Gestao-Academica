@@ -8,6 +8,14 @@ namespace TransformeseApp2.BLL
 
         private static string _user;
 
+        public static event Action<UsuarioDTO> OnUsuarioAtualizado;
+
+        public static void AtualizarUsuarioLogado(UsuarioDTO novoUsuario)
+        {
+            UsuarioLogado = novoUsuario;
+            OnUsuarioAtualizado?.Invoke(novoUsuario); // Notifica formulários/UCs ativos
+        }
+
         public static string User
         {
             get { return Session._user; }
