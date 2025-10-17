@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,13 +47,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ucHomePanel = new Guna.UI2.WinForms.Guna2Panel();
-            guna2CircleProgressBar3 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbUnidades = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             lblUnidades = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbCursos = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             lblCursos = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbAlunos = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             lblAlunos = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,12 +63,13 @@
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             pbAlunos = new Guna.UI2.WinForms.Guna2PictureBox();
             lblUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            timer = new System.Windows.Forms.Timer(components);
             ucHomePanel.SuspendLayout();
-            guna2CircleProgressBar3.SuspendLayout();
+            cpbUnidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox5).BeginInit();
-            guna2CircleProgressBar2.SuspendLayout();
+            cpbCursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).BeginInit();
-            guna2CircleProgressBar1.SuspendLayout();
+            cpbAlunos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
@@ -76,9 +78,9 @@
             // 
             // ucHomePanel
             // 
-            ucHomePanel.Controls.Add(guna2CircleProgressBar3);
-            ucHomePanel.Controls.Add(guna2CircleProgressBar2);
-            ucHomePanel.Controls.Add(guna2CircleProgressBar1);
+            ucHomePanel.Controls.Add(cpbUnidades);
+            ucHomePanel.Controls.Add(cpbCursos);
+            ucHomePanel.Controls.Add(cpbAlunos);
             ucHomePanel.Controls.Add(guna2HtmlLabel4);
             ucHomePanel.Controls.Add(guna2HtmlLabel3);
             ucHomePanel.Controls.Add(guna2HtmlLabel2);
@@ -92,24 +94,24 @@
             ucHomePanel.ShadowDecoration.CustomizableEdges = customizableEdges17;
             ucHomePanel.Size = new Size(805, 401);
             ucHomePanel.TabIndex = 2;
-            ucHomePanel.Paint += guna2Panel2_Paint;
             // 
-            // guna2CircleProgressBar3
+            // cpbUnidades
             // 
-            guna2CircleProgressBar3.BackColor = Color.FromArgb(140, 10, 126);
-            guna2CircleProgressBar3.Controls.Add(guna2PictureBox5);
-            guna2CircleProgressBar3.Controls.Add(lblUnidades);
-            guna2CircleProgressBar3.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar3.Font = new Font("Segoe UI", 12F);
-            guna2CircleProgressBar3.ForeColor = Color.White;
-            guna2CircleProgressBar3.Location = new Point(611, 158);
-            guna2CircleProgressBar3.Minimum = 0;
-            guna2CircleProgressBar3.Name = "guna2CircleProgressBar3";
-            guna2CircleProgressBar3.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2CircleProgressBar3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar3.Size = new Size(183, 183);
-            guna2CircleProgressBar3.TabIndex = 4;
-            guna2CircleProgressBar3.Text = "guna2CircleProgressBar3";
+            cpbUnidades.Animated = true;
+            cpbUnidades.BackColor = Color.FromArgb(140, 10, 126);
+            cpbUnidades.Controls.Add(guna2PictureBox5);
+            cpbUnidades.Controls.Add(lblUnidades);
+            cpbUnidades.FillColor = Color.FromArgb(200, 213, 218, 223);
+            cpbUnidades.Font = new Font("Segoe UI", 12F);
+            cpbUnidades.ForeColor = Color.White;
+            cpbUnidades.Location = new Point(611, 158);
+            cpbUnidades.Minimum = 0;
+            cpbUnidades.Name = "cpbUnidades";
+            cpbUnidades.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            cpbUnidades.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbUnidades.Size = new Size(183, 183);
+            cpbUnidades.TabIndex = 4;
+            cpbUnidades.Text = "guna2CircleProgressBar3";
             // 
             // guna2PictureBox5
             // 
@@ -134,22 +136,23 @@
             lblUnidades.TabIndex = 2;
             lblUnidades.Text = "99";
             // 
-            // guna2CircleProgressBar2
+            // cpbCursos
             // 
-            guna2CircleProgressBar2.BackColor = Color.FromArgb(140, 10, 126);
-            guna2CircleProgressBar2.Controls.Add(guna2PictureBox4);
-            guna2CircleProgressBar2.Controls.Add(lblCursos);
-            guna2CircleProgressBar2.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar2.Font = new Font("Segoe UI", 12F);
-            guna2CircleProgressBar2.ForeColor = Color.White;
-            guna2CircleProgressBar2.Location = new Point(313, 158);
-            guna2CircleProgressBar2.Minimum = 0;
-            guna2CircleProgressBar2.Name = "guna2CircleProgressBar2";
-            guna2CircleProgressBar2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2CircleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar2.Size = new Size(183, 183);
-            guna2CircleProgressBar2.TabIndex = 4;
-            guna2CircleProgressBar2.Text = "guna2CircleProgressBar2";
+            cpbCursos.Animated = true;
+            cpbCursos.BackColor = Color.FromArgb(140, 10, 126);
+            cpbCursos.Controls.Add(guna2PictureBox4);
+            cpbCursos.Controls.Add(lblCursos);
+            cpbCursos.FillColor = Color.FromArgb(200, 213, 218, 223);
+            cpbCursos.Font = new Font("Segoe UI", 12F);
+            cpbCursos.ForeColor = Color.White;
+            cpbCursos.Location = new Point(313, 158);
+            cpbCursos.Minimum = 0;
+            cpbCursos.Name = "cpbCursos";
+            cpbCursos.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cpbCursos.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbCursos.Size = new Size(183, 183);
+            cpbCursos.TabIndex = 4;
+            cpbCursos.Text = "guna2CircleProgressBar2";
             // 
             // guna2PictureBox4
             // 
@@ -174,22 +177,23 @@
             lblCursos.TabIndex = 2;
             lblCursos.Text = "99";
             // 
-            // guna2CircleProgressBar1
+            // cpbAlunos
             // 
-            guna2CircleProgressBar1.BackColor = Color.FromArgb(140, 10, 126);
-            guna2CircleProgressBar1.Controls.Add(guna2PictureBox1);
-            guna2CircleProgressBar1.Controls.Add(lblAlunos);
-            guna2CircleProgressBar1.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar1.Font = new Font("Segoe UI", 12F);
-            guna2CircleProgressBar1.ForeColor = Color.White;
-            guna2CircleProgressBar1.Location = new Point(25, 158);
-            guna2CircleProgressBar1.Minimum = 0;
-            guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar1.Size = new Size(183, 183);
-            guna2CircleProgressBar1.TabIndex = 3;
-            guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
+            cpbAlunos.Animated = true;
+            cpbAlunos.BackColor = Color.FromArgb(140, 10, 126);
+            cpbAlunos.Controls.Add(guna2PictureBox1);
+            cpbAlunos.Controls.Add(lblAlunos);
+            cpbAlunos.FillColor = Color.FromArgb(200, 213, 218, 223);
+            cpbAlunos.Font = new Font("Segoe UI", 12F);
+            cpbAlunos.ForeColor = Color.White;
+            cpbAlunos.Location = new Point(25, 158);
+            cpbAlunos.Minimum = 0;
+            cpbAlunos.Name = "cpbAlunos";
+            cpbAlunos.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            cpbAlunos.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbAlunos.Size = new Size(183, 183);
+            cpbAlunos.TabIndex = 3;
+            cpbAlunos.Text = "guna2CircleProgressBar1";
             // 
             // guna2PictureBox1
             // 
@@ -310,14 +314,14 @@
             Load += ucHome_Load;
             ucHomePanel.ResumeLayout(false);
             ucHomePanel.PerformLayout();
-            guna2CircleProgressBar3.ResumeLayout(false);
-            guna2CircleProgressBar3.PerformLayout();
+            cpbUnidades.ResumeLayout(false);
+            cpbUnidades.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox5).EndInit();
-            guna2CircleProgressBar2.ResumeLayout(false);
-            guna2CircleProgressBar2.PerformLayout();
+            cpbCursos.ResumeLayout(false);
+            cpbCursos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).EndInit();
-            guna2CircleProgressBar1.ResumeLayout(false);
-            guna2CircleProgressBar1.PerformLayout();
+            cpbAlunos.ResumeLayout(false);
+            cpbAlunos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
@@ -332,9 +336,9 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox pbAlunos;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUser;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbUnidades;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbCursos;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbAlunos;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -344,5 +348,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblAlunos;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUnidades;
+        private System.Windows.Forms.Timer timer;
     }
 }
