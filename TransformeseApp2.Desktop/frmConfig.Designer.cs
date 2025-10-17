@@ -243,6 +243,7 @@
             Name = "frmConfig";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmConfiguracoes";
+            Load += frmConfig_Load;
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
