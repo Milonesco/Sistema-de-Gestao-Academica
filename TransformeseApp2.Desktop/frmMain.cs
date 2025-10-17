@@ -113,10 +113,6 @@ namespace TransformeseApp2.Desktop
             panelConteudo.Controls.Clear();
             AbrirUserControl(new ucUsuario());
         }
-        private void pbNightMode_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAlunos_Click(object sender, EventArgs e)
         {
@@ -151,7 +147,7 @@ namespace TransformeseApp2.Desktop
                 this.ForeColor = lightPanelColor;
 
                 panelConteudo.BackColor = lightPanelColor;
-                pbColorMode.Image = Properties.Resources.lightmode;
+                pbColorMode.Image = Properties.Resources.darkmode;
             }
             else
             {
@@ -162,7 +158,7 @@ namespace TransformeseApp2.Desktop
                 this.ForeColor = darkPanelColor;
 
                 panelConteudo.BackColor = darkPanelColor;
-                pbColorMode.Image = Properties.Resources.darkmode;
+                pbColorMode.Image = Properties.Resources.lightmode;
             }
 
 
