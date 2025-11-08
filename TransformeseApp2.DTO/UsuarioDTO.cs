@@ -4,6 +4,7 @@
     {
         public string Login { get; set; }
         public string Senha { get; set; }
+        public string TpUsuario { get; set; } // 1-Admin, 2-Usuário Comum
 
         public override void ExibirInfo()
         {
