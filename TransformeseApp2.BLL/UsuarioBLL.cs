@@ -49,6 +49,7 @@ namespace TransformeseApp2.BLL
             
             if (string.IsNullOrWhiteSpace(usuario.Login))
             {
+
                 throw new Exception("Login é obrigatório!");
             }            
             
