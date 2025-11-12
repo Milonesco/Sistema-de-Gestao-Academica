@@ -88,9 +88,15 @@ namespace TransformeseApp2.Desktop
             {
                 Id = Database.Usuarios.Count + 1,
                 Nome = txtNome.Text,
-                Login = txtUsuario.Text,
+                Usuario = txtUsuario.Text,
                 Senha = txtSenha.Text,
-                UrlFoto = txtFotoCaminho.Text
+                Email = txtEmail.Text,
+                Telefone = txtTelefone.Text,
+                DataNascimento = dtpData.Value,
+                CPF = txtCPF.Text,
+                Sexo = cboSexo.Text,
+                UrlFoto = txtFotoCaminho.Text,
+                TpUsuario = (int)cboTipoUsuario.SelectedValue
             };
 
             UsuarioBLL.CadastrarUsuario(usuario);
@@ -117,14 +123,16 @@ namespace TransformeseApp2.Desktop
             txtSenha.Text = string.Empty;
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
+        private void frmCadastroUsuario_Load(object sender, EventArgs e)
         {
+            var tipoUsuarioList = UsuarioBLL.GetTipoUsuario();
 
-        }
+            cboTipoUsuario.DataSource = tipoUsuarioList;
+            cboTipoUsuario.DisplayMember = "DescricaoTipoUsuario";
+            cboTipoUsuario.ValueMember = "IdTipoUsuario";
 
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
+            cboTipoUsuario.SelectedIndex = -1;
+            cboTipoUsuario.Text = "-- Selecione o Tipo de Usuário --";
         }
     }
 }
