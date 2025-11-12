@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using TransformeseApp2.BLL;
+using TransformeseApp2.DAL;
 
 namespace TransformeseApp2.Desktop
 {
@@ -48,7 +49,7 @@ namespace TransformeseApp2.Desktop
                 var usuario = usuarioBLL.Login(txtUsuario.Text, txtSenha.Text);
                 Session.UsuarioLogado = usuario;
 
-                mdEntrar.Show($"Seja bem vinda(a) {Session.UsuarioLogado.Nome}!");
+                mdEntrar.Show($"Seja bem vinda(a) {Session.UsuarioLogado.Usuario}!");
                 frmMain frmMain = new frmMain();
                 frmMain.Show();
                 Hide();
