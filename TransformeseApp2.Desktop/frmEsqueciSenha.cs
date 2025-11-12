@@ -144,7 +144,7 @@ namespace TransformeseApp2.Desktop
             string login = txtLogin.Text.Trim();
             string novaSenha = txtNovaSenha.Text;
 
-            var usuario = Database.Usuarios.FirstOrDefault(u => u.Login.Equals(login, StringComparison.OrdinalIgnoreCase));
+            var usuario = Database.Usuarios.FirstOrDefault(u => u.Usuario.Equals(login, StringComparison.OrdinalIgnoreCase));
 
             if (usuario == null)
             {
