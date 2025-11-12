@@ -15,6 +15,7 @@ namespace TransformeseApp2.DAL
                 conexao = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; 
                                             Initial Catalog=TransformeseBD; 
                                             Integrated Security = True");
+                conexao.Open();
             }
             catch (Exception erro)
             {
